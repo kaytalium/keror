@@ -1,0 +1,57 @@
+/* Stylesheet */
+/* 
+General styles for the Kerror application
+developed by Ovel. K. Heslop
+August 20, 2017
+*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+/* wrapper */
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+/* Header */
+header{
+    height: 500px;
+    /*background: yellow;*/
+    text-align: center;
+    line-height: 300px;
+}
+.main-h1{
+    font-size:50px; 
+}
+.subtitle{
+    margin-top: -295px;
+    font-size: 14px;
+
+
+}
+
+footer{
+    height: 20px;
+    border-top: 2px solid #333;
+    font-size: 12px;
+    margin-top: 160px; 
+    padding: 5px 5px 0 5px; 
+    
+}
+
+footer > .version{
+    float: right;
+    display: block;
+    
+}
+
+footer .copyright{
+    float: left;
+    display: block;
+}
