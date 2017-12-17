@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/kaytalium/keror#readme",
   "dependencies": {
-    "concurrently": "^3.5.0",
-    "electron": "^1.7.5",
-    "electron-packager": "^8.7.2"
+    "concurrently": "3.5.1",
+    "electron": "1.7.9",
+    "electron-packager": "10.1.0"
   },
   "devDependencies": {
-    "electron-reload": "^1.2.1"
+    "electron-reload": "1.2.2"
   }
 }
