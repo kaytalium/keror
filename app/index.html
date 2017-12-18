@@ -3,6 +3,7 @@
 <head>
     <title>KEROR</title>
     <link rel="stylesheet" type="text/css" href="assests/css/general.css">
+    
 </head>
 
 <body>
@@ -10,12 +11,12 @@
     <header>
         <h1 class="main-h1">Keror</h1>
         <div class="login_form">
-            <form action="dashboard.html" method="POST">
-                <label for="username" class="l_login">Username</label>
-                <input type="text" name="usrnme" placeholder="Username example: john@example.com" class="i_login">
-                <label for="password" class="l_login">Password</label>
+            <form method="POST" id="lgon_form">
+                <label for="username" class="l_login">Username <span id="err_usr"></span></label>
+                <input type="email" name="usrnme" placeholder="Username example: john@example.com" class="i_login">
+                <label for="password" class="l_login">Password <span id="err_pwd"></span></label>
                 <input type="password" name="pwd" placeholder="Password" class="i_login">
-                <input type="submit" value="login" class="btn">
+                <input type="submit" value="login" class="btn" id="submit">
             </form>
             <div class="signup">
                 Don't have an account? <a href="signup.html">sign up here</a>
@@ -24,7 +25,7 @@
     </header>
     <footer>
         <div class="copyright">
-             All rights reserve @ 2017 Knymbus, Inc.
+             All rights reserve @ <span id="copyright_date"></span> Knymbus, Inc.
         </div>
         <div class="version">
             v1.0.0
@@ -34,3 +35,6 @@
 </body>
 
 </html>
+<script>
+    require('../render.js')
+</script>

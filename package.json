@@ -1,6 +1,6 @@
 {
   "name": "keror",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple desktop application that allow users to see into the future.",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,8 @@
     "electron-packager": "10.1.0"
   },
   "devDependencies": {
-    "electron-reload": "1.2.2"
+    "@types/jquery": "^3.2.17",
+    "electron-reload": "1.2.2",
+    "fs-jetpack": "^1.2.0"
   }
 }
