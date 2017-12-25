@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 // Use new ES6 modules syntax for everything.
-const electron_1 = require("electron"); // native electron module
+const remote = require('electron').remote; // native electron module
 const jetpack = require('fs-jetpack'); // module loaded from npm
 const $ = require("jquery");
 // console.log('Loaded environment variables:', env);
-var app = electron_1.remote.app;
+var app = remote.app;
 var appDir = jetpack.cwd(app.getAppPath());
 var appVer = appDir.read('package.json', 'json').version;
 // Holy crap! This is browser window with HTML and stuff, but I can read

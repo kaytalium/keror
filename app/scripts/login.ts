@@ -1,5 +1,5 @@
 // Use new ES6 modules syntax for everything.
-import {remote} from 'electron'; // native electron module
+const remote = require('electron').remote; // native electron module
 const jetpack = require('fs-jetpack'); // module loaded from npm
 // import { greet } from './hello_world/hello_world'; // code authored by you in this project
 import env from './env';
