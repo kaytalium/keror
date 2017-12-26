@@ -1,0 +1,97 @@
+/* stylesheet */
+.login{
+    height: 500px;
+    width: 400px;
+    margin: auto auto;
+    background: #394861;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgb(11, 11, 12);
+}
+
+.login h1{
+    height: 180px;
+    margin: -20px 0 0 0;
+    line-height: 150px;
+    font-size: 3.2em;
+    background: #212938;
+}
+
+/* login styles */
+.login_form{
+    height: 100%;
+    padding-top: 30px;
+}
+
+.l_login{
+    width: 60%;
+    float: left;
+    text-align: left;
+    margin: 20px 0 -5px 0; 
+    
+}
+
+.i_login{
+    margin: auto;
+    width: 90%;
+    height: 45px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    
+    color: #fff;
+    display: flex;
+    padding-left: 5px;
+    font-size: 15px;
+    background: none;
+}
+
+
+
+.btn{
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: #40BEB4;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 90%;
+    height: 50px; 
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#signupBtn{
+    cursor: pointer;
+    color: #40BEB4;
+}
+
+#signupBtn:hover{
+    text-decoration: underline;
+}
+
+/* error message */
+.err_msg{
+    position: absolute;
+    border: 1px solid #394861;
+    background: rgb(207, 149, 115);
+    background: rgba(218, 87, 87, 0.838);
+    min-width:200px;
+    max-width: 300px;
+    min-height: 30px;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px;
+    right: 10;
+    display: none;
+    word-wrap: break-word;
+    clear: both;
+
+
+}

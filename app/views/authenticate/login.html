@@ -1,15 +1,17 @@
-<header>
+<link rel="stylesheet" href="./assests/css/login.css">
+<div class="login">
     <h1 class="main-h1">Keror</h1>
     <div class="login_form">
         <form method="POST" id="lgon_form">
-            <label for="username" class="l_login">Username <span id="err_usr"></span></label>
-            <input type="email" name="usrnme" placeholder="Username example: john@example.com" class="i_login">
-            <label for="password" class="l_login">Password <span id="err_pwd"></span></label>
-            <input type="password" name="pwd" placeholder="Password" class="i_login">
-            <input type="submit" value="login" class="btn" id="submit">
+            <div id="err_usrnme" class="err_msg">Invalid Email</div>
+            <input type="email" name="usrnme" id="usrnme" placeholder="Username example: john@example.com" class="i_login">
+            <div id="err_pwd" class="err_msg">No password given</div>
+            <input type="password" name="pwd" id="pwd" placeholder="Password" class="i_login">
+            <input type="submit" value="LOG IN" class="btn" id="submit">
         </form>
         <div class="signup">
-            Don't have an account? <a href="signup.html">sign up here</a>
+            Don't have an account? <span id="signupBtn">sign up</span>
         </div>
     </div>
-</header>
+</div>
+<script>require('./scripts/login')</script>
