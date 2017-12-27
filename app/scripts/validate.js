@@ -50,6 +50,11 @@ class validate {
         this.login = (cb) => {
             storage.get('users', cb);
         };
+        this.setProfile = (data) => {
+            storage.set('current_user', data, function (err) {
+                console.log(err);
+            });
+        };
         this.isEmail = function (email) {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email.toLowerCase());

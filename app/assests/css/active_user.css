@@ -1,0 +1,56 @@
+.login_active{
+    width: 400px;
+    height: 500px;
+    /* background: red; */
+    margin: auto;
+    box-shadow: 2px 2px 2px #40BEB4;
+    border: 1px solid rgba(64, 190, 179, 0.105);
+}
+
+.profile_img{
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+    border: 5px solid #40BEB4;
+    margin: 30px auto;
+    /* box-shadow: 3px 3px 3px #40BEB4; */
+}
+
+input[type="password"]{
+    margin: auto;
+    width: 90%;
+    height: 45px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    
+    color: #fff;
+    display: flex;
+    padding-left: 30px;
+    font-size: 15px;
+    background: none;
+    
+}
+
+button{
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: #40BEB4;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 90%;
+    height: 50px; 
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#mail{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -180px;
+}

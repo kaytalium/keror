@@ -3,9 +3,6 @@ import validate from './validate';
 import $ = require('jquery'); 
 
 
-// Holy crap! This is browser window with HTML and stuff, but I can read
-// here files like it is node.js! Welcome to Electron world :)
-
 $(document).ready(function(){
 
     //get the form 
@@ -18,6 +15,12 @@ $(document).ready(function(){
         e.preventDefault();
         $('.content').load("./views/authenticate/signup.html")
     })
+
+    //here we check to see if a user is already logged in
+    //if yes the present this user screen for them to login
+    $('.content').load("./views/authenticate/activeUser.html")
+
+    //if not display default login
         
     
 
@@ -32,6 +35,8 @@ $(document).ready(function(){
             username:formData[0],
             password:formData[1]
         }
+
+        let profile; 
 
         //create validate class
         const v = new validate();
@@ -48,14 +53,31 @@ $(document).ready(function(){
                 if(data.users){
                     
                     var users = data.users;
+                    let currentUser;
                     users.forEach(element => {                
                         if(element.username == user.username.value && element.password == user.password.value){
-                            $(location).attr('href','./dashboard.html');
-                        }else{
-                            v.validateLogin()
+                            currentUser = element.username;
                         }
                 
                     });
+
+                    
+                    //we can now get the current user that is logging in
+                    if(currentUser){
+                        
+                         data.profile.forEach(el => {
+                            
+                            if(el[currentUser]){
+                                profile = el[currentUser];
+                                profile.username = currentUser;
+                            }
+                         });
+                        v.setProfile(profile)
+                        //$(location).attr('href','./dashboard.html');
+                    }else{
+                        v.validateLogin()
+                    }
+                    
                 }
     
               })

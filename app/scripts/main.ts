@@ -28,13 +28,13 @@ $(document).ready(function(){
     $('.footer').load("./views/general/footer.html", function(){
         
         //show app version in footer
-        $(".version").html('V'+appVer)
+        $(".version").html('app version '+appVer)
 
         //Get location for which the current year will be place for the copyright
         $('#copyright_date').html(new Date().getFullYear().toString())
 
         //get the status of internet connection and display 
-        status($('.online'))
+        // status($('.online'))
     })
 
     

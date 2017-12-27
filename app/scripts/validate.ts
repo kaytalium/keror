@@ -60,6 +60,12 @@ class validate {
          storage.get('users',cb);
     }
 
+    public setProfile = (data)=>{
+        storage.set('current_user',data,function(err){
+            console.log(err)
+        })
+    }
+
     private isEmail = function (email): boolean {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email.toLowerCase());

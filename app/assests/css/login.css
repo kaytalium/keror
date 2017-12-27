@@ -17,6 +17,16 @@
     line-height: 150px;
     font-size: 3.2em;
     background: #212938;
+    color: rgb(235, 234, 234);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.trademark{
+    text-transform: uppercase;
+    margin-top: -108px;
+    margin-left: 310px;
+    position: absolute;
 }
 
 /* login styles */
@@ -43,9 +53,16 @@
     
     color: #fff;
     display: flex;
-    padding-left: 5px;
+    padding-left: 30px;
     font-size: 15px;
     background: none;
+    
+}
+
+#mail{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -180px;
 }
 
 
