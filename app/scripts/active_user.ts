@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 import { clearInterval } from 'timers';
-
+import {activeUser} from './interface'
 
 var users = [
     {
@@ -190,13 +190,3 @@ $(document).ready(function () {
 
 
 })
-
-interface activeUser {
-    image: String,
-    fullname: String,
-    firstname: String,
-    lastname: String,
-    status?: String,
-    icon?: String,
-
-}
