@@ -109,9 +109,6 @@ var users = [
                 pwd.val('')
             })
         }
-
-
-
     }, 1000)
 
 let display = $(".login_active")
