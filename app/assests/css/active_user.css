@@ -1,19 +1,32 @@
 .login_active{
-    width: 400px;
-    height: 500px;
-    /* background: red; */
+    width: 80%;
     margin: auto;
-    box-shadow: 2px 2px 2px #40BEB4;
-    border: 1px solid rgba(64, 190, 179, 0.105);
+    flex: content;
+    justify-content: center;
+    display: flex;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    /* border: 1px solid #40BEB4; */
+    
+    
+    
+    
 }
 
 .profile_img{
-    height: 200px;
-    width:200px;
+    height: 120px;
+    width:120px;
     border-radius: 50%;
-    border: 5px solid #40BEB4;
+    border: 1px solid #fff;
     margin: 30px auto;
+    background-size: cover;
+    cursor: pointer;
+    background: #fff;
     /* box-shadow: 3px 3px 3px #40BEB4; */
+}
+
+.active{
+    /* border: 1px solid rgb(203, 196, 6); */
 }
 
 input[type="password"]{
@@ -22,35 +35,195 @@ input[type="password"]{
     height: 45px;
     outline: none;
     border: 0;
-    border-bottom: 1px solid #fff;
+    border: 1px solid #fff; 
     
     color: #fff;
     display: flex;
-    padding-left: 30px;
-    font-size: 15px;
+    padding-left: 60px;
+    font-size: 16px;
     background: none;
+
+    border-radius: 5px;
     
 }
 
+::-webkit-input-placeholder{
+    color: rgb(212, 214, 216);
+}
+
 button{
-    margin-top: 30px;
+    margin-top: -43px;
+    margin-right: -40px;
     outline: none;
     border: none;
     display: inline-block;
     background-color: #40BEB4;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 50%;
     font-size: 18px;
-    width: 90%;
-    height: 50px; 
+    width: 40px;
+    height: 40px; 
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+    float: right;
     
 }
 
-#mail{
+.input_symbol{
     position: absolute;
-    margin-top: 10px;
-    margin-left: -180px;
+    margin-top: 1px;
+    margin-left: 16px;
+    background: #40BEB4;
+    padding: 13.5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid #fff;
+    
+}
+
+.name{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.users{
+    width: 150px;
+    float: left;
+    margin: 10px; 
+}
+
+/* side bar user list */
+.logged_users{
+    position: absolute;
+    right: -80;
+    top: 0;
+    width: 80px; /*max width 80px*/
+    height: 100vh;
+    padding-top:30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.logged_users::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.view{
+    width: 60;
+    height: 70px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: content;
+    /* background: red; */
+}
+
+.view:last-child{
+    margin-bottom: 50vh;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    margin: auto;
+    background: #fff; 
+    
+
+}
+
+.s-name{
+    font-size: 9px;
+    margin-top: 0;
+}
+
+.s-name > .icon > i{
+    color: rgb(203, 196, 6);
+}
+
+
+i.inactive{
+    display: none;
+}
+
+.user_options{
+    position: absolute;
+    bottom: 80;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 300px;
+    height: 80px; 
+    display: flex;
+    flex: content;
+    justify-content: center;
+}
+
+.icon_btn{
+    margin: auto;
+    background: rgb(235, 70, 70);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    flex: content;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon_btn i{
+    margin: auto;
+}
+
+.icon_btn p{
+    position: absolute;
+    width: 100px;
+    margin-top: 40px;
+    /* background: red; */
+}
+
+.close{
+    background: rgb(235, 70, 70);
+    padding: 10px;
+    top: 10;
+    right: 80px;
+    position: fixed;
+    display: none;
+}
+
+.background_filter{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgb(67, 66, 66);
+    z-index: -1;
+    
+    /* transform: translate(-50%,0); */
+    filter: blur(5px);
+    opacity: .4;
+}
+/* 
+.new_user_text{
+    width: auto;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 150;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.new_user_text:hover{
+    text-decoration: underline;
+} */
+
+.frm{
+    width: 300px;
+    margin: auto;
 }

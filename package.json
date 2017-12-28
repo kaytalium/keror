@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kaytalium/keror#readme",
   "dependencies": {
+    "@types/jqueryui": "^1.12.0",
     "concurrently": "3.5.1",
     "electron": "1.7.9",
     "electron-json-storage": "^4.0.2",
@@ -29,6 +30,7 @@
     "@types/jquery": "^3.2.17",
     "electron-reload": "1.2.2",
     "fs-jetpack": "^1.2.0",
-    "htmlparser": "^1.7.7"
+    "htmlparser": "^1.7.7",
+    "jquery-ui": "^1.12.1"
   }
 }

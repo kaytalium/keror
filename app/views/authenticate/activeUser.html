@@ -1,9 +1,38 @@
 <link rel="stylesheet" href="./assests/css/active_user.css">
-<div class="login_active">
-    <div class="profile_img"></div>
-    <form>
-        <img id="mail" src="./assests/icons/ic_lock_outline_white_24px.svg" onerror="this.onerror=null; this.src='image.png'">
-        <input type="password" placeholder="Password">
-        <button>LOGIN</button>
-    </form>
+<link rel="stylesheet" href="./assests/css/font/css/font-awesome.min.css">
+
+<div class="background_filter"></div>
+
+
+<div class="login_active"></div>
+<div class="logged_users"></div>
+
+<!-- <div id="timer"></div> -->
+<div class="user_options">
+
+    <div class="icon_btn" id="new_user">
+        <i class="fa fa-user fa-lg" aria-hidden="true" title="More users"></i>
+        <p>New User</p>
+    </div>
+
+    <div class="icon_btn" id="switch_users">
+        <i class="fa fa-users fa-lg" aria-hidden="true" title="More users"></i>
+        <p>Switch User</p>
+    </div>
+
 </div>
+
+
+<form class="frm">
+
+    <div class="input_symbol">
+        <i class="fa fa-key fa-lg fa-fw" aria-hidden="true"></i>
+    </div>
+    <input type="password" placeholder="Enter Password" id="pwd">
+    <button>
+        <i class="fa fa-arrow-right fa-lg fa-fw" aria-hidden="true"></i>
+    </button>
+</form>
+
+
+<script>require('./scripts/active_user')</script>
