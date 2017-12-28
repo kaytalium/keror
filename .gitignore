@@ -28,7 +28,7 @@ testem.log
 /typings
 
 # All js files in app
-/app/*.js
+/app/**/*.js
 
 # e2e
 /e2e/*.js
