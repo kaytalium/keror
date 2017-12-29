@@ -1,127 +1,145 @@
 import * as $ from 'jquery';
 import { clearInterval } from 'timers';
-import {activeUser} from './interface'
+import { ActiveUser } from './interface'
+import { timer } from "./clock"
 
-var users = [
+var users: Array<ActiveUser> = [
     {
         image: "./default.png",
         fullname: "Ovel Heslop",
         firstname: "Ovel",
         lastname: "Heslop",
-        status: "active"
+        status: "active",
+        username: "heslopok@gmail.com",
+        background_theme: false,
+        background_url: "default"
     },
     {
         image: "./default.png",
         fullname: "John Brown",
         firstname: "John",
         lastname: "Brown",
-        status: "inactive"
+        status: "inactive",
+        username: "brownJe@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg2.jpg"
     },
     {
         image: "./default.png",
         fullname: "Tamele Heslop",
         firstname: "Tamele",
         lastname: "Heslop",
-        status: "inactive"
+        status: "inactive",
+        username: "heslopta@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg3.jpg"
     },
     {
         image: "./default.png",
         fullname: "Zamir Heslop",
         firstname: "Zamir",
         lastname: "Heslop",
-        status: "inactive"
+        status: "inactive",
+        username: "heslopze@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg4.jpg"
     },
     {
         image: "./default.png",
         fullname: "Zuri Heslop",
         firstname: "Zuri",
         lastname: "Heslop",
-        status: "inactive"
+        status: "inactive",
+        username: "heslopzee@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg5.jpeg"
     },
     {
         image: "./default.png",
         fullname: "Morlan Wilson",
         firstname: "Morlan",
         lastname: "Wilson",
-        status: "inactive"
+        status: "inactive",
+        username: "wilsonmm@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg6.jpg"
     },
     {
         image: "./default.png",
         fullname: "Theodore Robinson",
         firstname: "Theodore",
         lastname: "Robinson",
-        status: "inactive"
+        status: "inactive",
+        username: "robinsontd@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg7.jpg"
     },
     {
         image: "./default.png",
         fullname: "Veronique Pitter",
         firstname: "Veronique",
         lastname: "Pitter",
-        status: "inactive"
+        status: "inactive",
+        username: "pittervf@gmail.com",
+        background_theme: true,
+        background_url: "./assests/img/bg3.jpg"
     },
     {
         image: "./default.png",
         fullname: "Jodie Henry",
         firstname: "Jodie",
         lastname: "Henry",
-        status: "inactive"
+        status: "inactive",
+        username: "henryjd@gmail.com",
+        background_theme: false,
+        background_url: "default"
     },
     {
         image: "./default.png",
         fullname: "Rochelle Crawford",
         firstname: "Rochelle",
         lastname: "Crawford",
-        status: "inactive"
-    },
+        status: "inactive",
+        username: "crawfordrr@gmail.com",
+        background_theme: false,
+        background_url: "default"
+    }
 
 ],
-    template_user = (user: activeUser) => {
-        return '<div class="users">' +
+    template_user = (user: ActiveUser) => {
+        return '<div class="user">' +
             '<div class="profile_img ' + user.status + '">' +
             '<img src="' + user.image + '" height="120" alt="">' +
             '</div>' +
             '<div class="name">' + user.fullname + '</div>' +
             '</div>';
     },
-    templ_sidebar_user = (user: activeUser) => {
-        return '<div class="view">' +
+    templ_sidebar_user = (user: ActiveUser) => {
+        return '<div class="view" data-username="' + user.username + '">' +
             '<div class="circle">' +
             '<img src="' + user.image + '" width="50" alt="">' +
             '</div>' +
             '<div class="s-name"><sapn class="icon"><i class="fa fa-check-circle ' + user.status + '" aria-hidden="true"></i></span> ' + user.firstname + '</div>' +
             '</div>';
-    },
-    pwd_widget_timer = setInterval(() => {
-        var now = new Date().getTime();
-
-        var distance = timelimit - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        $('#timer').html(minutes.toString() + " : " + seconds.toString() + " Lapse: " + distance.toString())
-
-        if(distance < 0 ){
-            clearInterval(pwd_widget_timer)
-            form.fadeOut('slow',function(){
-                pwd.val('')
-            })
-        }
-    }, 1000)
+    }
 
 let display = $(".login_active")
 let sidebar_display = $('.logged_users')
 let switch_users = $('#switch_users')
 let sidebar_close = $('.close')
 let form = $('.frm')
-let active_user = $('.users')
+let active_user = $('.user')
 let pwd = $('#pwd')
+let new_user = $('#new_user')
 
-var timelimit;
+var view = $('.view')
+
 
 $(document).ready(function () {
+
+    new_user.click(function(){
+        $('.content').load("./views/authenticate/login.html")
+    })
 
     if (users.length == 1) {
         switch_users.delay(1000).fadeOut(600)
@@ -130,7 +148,14 @@ $(document).ready(function () {
         if (el.status === 'active') {
             display.append(template_user(el))
             $(document).prop('title', 'Active user - ' + el.fullname);
-            active_user = $('.users')
+            active_user = $('.user')
+            if (el.background_theme) {
+                $('body').css({ "background": "url('" + el.background_url + "')", "background-size": "cover" })
+            }
+            else {
+                $('body').css({ "background": "url('./assests/img/bg1.jpg')", "background-size": "cover" })
+            }
+
         }
         sidebar_display.append(templ_sidebar_user(el))
 
@@ -157,21 +182,57 @@ $(document).ready(function () {
             })
         }
 
+        //assign the appended mini profile elements to a var
+        view = $('.view')
 
+
+        /**
+         * Control for the mini profile element click 
+         */
+        view.click(function () {
+            let username = $(this).data('username');
+            let newUser: Array<ActiveUser> = users.filter(function (el) {
+                return el.username == username
+            })
+
+            newUser[0].isSwitching = true;
+            display.html(template_user(newUser[0]))
+            if (newUser[0].background_theme)
+                $('body').css({ "background": "url('" + newUser[0].background_url + "')", "background-size": "cover" })
+            else
+                $('body').css({ "background": "url('./assests/img/bg1.jpg')", "background-size": "cover" })
+
+            //$(document).prop('title', 'Active user - ' + newUser[0].fullname);
+            active_user = $('.user')
+            active_user.on('click', function () {
+                form.fadeIn('slow', function () {
+                    startTimer();
+                })
+
+
+            });
+
+            active_user.trigger('click')
+            switch_users.trigger('click')
+
+
+        })
     })
 
 
     /**
      * Activate the password input timeout and display password widget
      */
-    active_user.click(() => {
-        form.fadeIn('slow')
-        timelimit = (new Date().getTime() + 5 * 60 * 1000);
+    active_user.on("click", () => {
+        form.fadeIn('slow', function () {
+            startTimer();
+        })
+
     })
 
     pwd.focusin(function () {
         console.log('password input has focus')
-        timelimit = (new Date().getTime() + 5 * 60 * 1000);
+        timer.limit(5)
     })
 
     pwd.focusout(function () {
@@ -179,8 +240,8 @@ $(document).ready(function () {
         // setTimeout(pwd_widget_timer(pwd), 10000)
     })
 
-    pwd.keydown(function(){
-        timelimit = (new Date().getTime() + 1 * 60 * 1000);
+    pwd.keydown(function () {
+        timer.limit(1)
     })
 
     /**
@@ -189,4 +250,23 @@ $(document).ready(function () {
     form.hide();
 
 
+
+
 })
+
+function startTimer() {
+    timer.limit(5)
+    timer.ticker().subscribe({
+        next: function (v) {
+            //console.log(v)
+            // $('#timer').html(v)
+        },
+        complete: function () {
+            console.log("done")
+            form.fadeOut('slow', function () {
+                pwd.val('')
+            })
+        }
+    })
+
+}
