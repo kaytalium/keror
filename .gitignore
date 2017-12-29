@@ -5,7 +5,7 @@
 /tmp
 /src
 /builds
-
+/release-builds
 # dependencies
 /node_modules
 /bower_components

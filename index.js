@@ -1,9 +1,26 @@
 'use strict'
+//handle setupevents as quickly as possible
+const setupEvents = require('./installers/setupEvents')
+if (setupEvents.handleSquirrelEvent()) {
+  // squirrel event handled and app will exit in 1000ms, so don't do anything else
+  return;
+}
+
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+let BrowserWindow = electron.BrowserWindow
+let loadingScreen = electron.BrowserWindow
+let windowParams = {
+  titleBarStyle: 'hidden',
+  width: 1020,
+  height: 720,
+  minWidth: 720,
+  minHeight: 720,
+  backgroundColor: '#000',//#312450
+  show: false
+}
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,15 +29,29 @@ let mainWindow
 //Development mode only 
 require('electron-reload')(__dirname);
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1020, height: 720})
+  mainWindow = new BrowserWindow(windowParams)
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.show();
+
+    if (loadingScreen) {
+      let loadingScreenBounds = loadingScreen.getBounds();
+      mainWindow.setBounds(loadingScreenBounds);
+      loadingScreen.close();
+    }
+  });
+
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  })
+
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -29,12 +60,29 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  require('./menu/mainmenu')
+}
+
+function createLoadingScreen() {
+  loadingScreen = new BrowserWindow(Object.assign(windowParams, { parent: mainWindow }));
+  loadingScreen.loadURL('file://' + __dirname + '/app/loading.html');
+  loadingScreen.on('closed', () => loadingScreen = null);
+  loadingScreen.webContents.on('did-finish-load', () => {
+    loadingScreen.show();
+  });
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createLoadingScreen()
+  setTimeout(() => {
+    createWindow()
+  }, 20000);
+  
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
