@@ -8,7 +8,7 @@
     line-height: 30px;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 5px 5px 5px rgb(11, 11, 12);
+    /* box-shadow: 5px 5px 5px rgb(11, 11, 12); */
 }
 
 .login h1{
@@ -57,6 +57,10 @@
     font-size: 15px;
     background: none;
     
+}
+
+.i_login::-webkit-input-placeholder{
+    color: rgb(212, 214, 216);
 }
 
 #mail{

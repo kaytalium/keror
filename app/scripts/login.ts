@@ -5,6 +5,9 @@ import $ = require('jquery');
 
 $(document).ready(function(){
 
+
+    //load the theme 
+    $('body').css({"background":"url('./assests/img/bg1.jpg')","background-size":"cover"})
     //get the form 
     var form        = $("#lgon_form");
     var submit      = $("#submit");
@@ -16,9 +19,7 @@ $(document).ready(function(){
         $('.content').load("./views/authenticate/signup.html")
     })
 
-    //here we check to see if a user is already logged in
-    //if yes the present this user screen for them to login
-    $('.content').load("./views/authenticate/activeUser.html")
+    
 
     //if not display default login
         
