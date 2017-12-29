@@ -1,6 +1,6 @@
 {
   "name": "keror",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simple desktop application that allow users to see into the future.",
   "main": "index.js",
   "scripts": {

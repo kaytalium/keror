@@ -10,8 +10,8 @@ html, body{
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: url('./../img/bg1.jpg') rgb(62, 67, 80);
-    background-size: cover;
+    /* background: url('./../img/bg1.jpg') rgb(62, 67, 80); */
+    
     color: #fff;
     opacity: 0.95;
 }
@@ -39,7 +39,7 @@ html, body{
     background: #1074C2;
 }
 
-.footer .version, .copyright, .setting{
+.footer .version, .copyright, .setting, .date, .clock{
     margin: 0 10px;
     display: block;
 }
@@ -50,14 +50,43 @@ html, body{
     
 }
 
-.footer .online::before{
-    content: 'Status: ';
+.footer .online{
+    /* content: 'Status: '; */
+    margin: 8px 0;
+    /* color: rgb(10, 3, 109); */
 }
-.footer .copyright{
+.footer .copyright, .date, .clock{
     float: right;
 }
 
 .footer .setting{
     margin-top:8px; 
+    /* display: none; */
+}
+
+.footer .setting .notice{
+    background: rgb(211, 87, 87);
+    padding: 3px;
+    margin: -25px 0 0 10px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* display: flex; */
+    flex-direction: column;
     display: none;
 }
+
+#update_cog{
+    cursor: pointer;
+}
+
+.footer .version{
+    margin-left: -5px;
+}
+
