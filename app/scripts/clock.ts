@@ -34,8 +34,8 @@ export module clock {
             sec: (sec < 10 ? '0' + sec : sec),
             fullTime: ""
         }
-
-        if (hrs > 12 && hrs < 24) {
+        
+        if (hrs > 11 && hrs < 24) {
             state.mid = "PM"
             state.hrs = (hrs - 12 == 0 ? 12 : hrs - 12)
         } else if (hrs < 12 || hrs == 24) {
