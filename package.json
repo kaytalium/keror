@@ -27,6 +27,7 @@
   "dependencies": {
     "@types/jqueryui": "^1.12.0",
     "concurrently": "3.5.1",
+    "electron-is-dev": "^0.3.0",
     "electron-json-storage": "^4.0.2",
     "electron-reload": "1.2.2",
     "fs-jetpack": "^1.2.0",

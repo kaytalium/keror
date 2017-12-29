@@ -9,6 +9,10 @@ if (setupEvents.handleSquirrelEvent()) {
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
+
+const isDev = require('electron-is-dev');  // this is required to check if the app is running in development mode. 
+const { appUpdater } = require('./autoUpdater');
+
 // Module to create native browser window.
 let BrowserWindow = electron.BrowserWindow
 let loadingScreen = electron.BrowserWindow
@@ -26,6 +30,11 @@ let windowParams = {
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
+// Funtion to check the current OS. As of now there is no proper method to add auto-updates to linux platform.
+function isWindowsOrmacOS() {
+  return process.platform === 'darwin' || process.platform === 'win32';
+}
+
 //Development mode only 
 require('electron-reload')(__dirname);
 
@@ -35,6 +44,17 @@ function createWindow() {
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/app/index.html`)
+
+  const page = mainWindow.webContents;
+
+  page.once('did-frame-finish-load', () => {
+    const checkOS = isWindowsOrmacOS();
+    
+    if (checkOS && !isDev) {
+      // Initate auto-updates on macOs and windows
+      appUpdater();
+    }
+  });
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
@@ -65,7 +85,7 @@ function createWindow() {
 }
 
 function createLoadingScreen() {
-  loadingScreen = new BrowserWindow(Object.assign(windowParams, { parent: mainWindow }));
+  loadingScreen = new BrowserWindow(Object.assign(windowParams, { parent: mainWindow, modal: true, show: false }));
   loadingScreen.loadURL('file://' + __dirname + '/app/loading.html');
   loadingScreen.on('closed', () => loadingScreen = null);
   loadingScreen.webContents.on('did-finish-load', () => {
@@ -81,7 +101,7 @@ app.on('ready', () => {
   setTimeout(() => {
     createWindow()
   }, 20000);
-  
+
 })
 
 // Quit when all windows are closed.
