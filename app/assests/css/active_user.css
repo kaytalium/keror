@@ -102,7 +102,6 @@ button{
     height: 100vh;
     padding-top:30px;
     margin-bottom: 50px;
-    cursor: pointer;
     overflow-y: scroll;
 }
 
@@ -119,6 +118,8 @@ button{
     justify-content: center;
     flex-direction: column;
     flex: content;
+    z-index: 999;
+    cursor: pointer;
     /* background: red; */
 }
 
@@ -132,6 +133,7 @@ button{
     border-radius:50%;
     margin: auto;
     background: #fff; 
+
     
 
 }
