@@ -237,7 +237,7 @@ $(document).ready(function () {
 
     pwd.focusout(function () {
         console.log('focus out')
-        // setTimeout(pwd_widget_timer(pwd), 10000)
+        
     })
 
     pwd.keydown(function () {

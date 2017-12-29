@@ -1,24 +1,20 @@
-// Use new ES6 modules syntax for everything.
-const remote = require('electron').remote; // native electron module
-const jetpack = require('fs-jetpack'); // module loaded from npm
-// import { greet } from './hello_world/hello_world'; // code authored by you in this project
+
+const remote = require('electron').remote; 
+const jetpack = require('fs-jetpack'); 
+
 import env from './env';
 import { status } from './network';
-import $ = require('jquery');
+import * as $ from 'jquery';
+
 const storage = require('electron-json-storage');
 
 import {clock} from './clock'
 
 
-
-// console.log('Loaded environment variables:', env);
-
 var app = remote.app;
 var appDir = jetpack.cwd(app.getAppPath());
 var appVer = appDir.read('package.json', 'json').version
 
-// Holy crap! This is browser window with HTML and stuff, but I can read
-// here files like it is node.js! Welcome to Electron world :)
 
 $(document).ready(function () {
 
@@ -40,6 +36,8 @@ $(document).ready(function () {
             $('.content').load("./views/authenticate/activeUser.html")
         }
     });
+
+    
     /**
      * here we need to check if any user is logged in if not we display the login screen 
      * if any user is logged in then display there personalized login screen
