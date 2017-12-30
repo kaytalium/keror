@@ -1,13 +1,45 @@
-import env from './env';
+/**
+ * import interface
+ */
+import {LoginUI} from './interface'
+
+/**
+ * import js-yaml to handle my .yml config files  
+ */
+const yaml = require('js-yaml');
+
+/**
+ * Import node fs
+ */
+const fs = require('fs');
+
 import validate from './validate';
 import $ = require('jquery'); 
 
 
+/**
+ * create var for holding the data coming from the footer.yml file
+ */
+let loginUI: LoginUI;
+
+try {
+    loginUI = yaml.safeLoad(fs.readFileSync('./app/config/login.yml', 'utf8'));
+    console.log(loginUI)
+} catch (e) {
+    console.log(e);
+}
+
 $(document).ready(function(){
 
 
+    $('.main-h1').html(loginUI.app_name)
+
+    $('.trademark').html(loginUI.trademark)
+
+    $('.login_form').append(loginUI.element)
+
     //load the theme 
-    $('body').css({"background":"url('./assests/img/bg1.jpg')","background-size":"cover"})
+    $('body').css(Object.assign(loginUI.defaultBackground))
     //get the form 
     var form        = $("#lgon_form");
     var submit      = $("#submit");

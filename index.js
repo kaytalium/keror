@@ -17,13 +17,16 @@ const { appUpdater } = require('./autoUpdater');
 let BrowserWindow = electron.BrowserWindow
 let loadingScreen = electron.BrowserWindow
 let windowParams = {
-  titleBarStyle: 'hidden',
+  title: 'Keror',
   width: 1020,
   height: 720,
   minWidth: 720,
   minHeight: 720,
   backgroundColor: '#000',//#312450
-  show: false
+  show: false,
+  webpreferences: {
+    overlayScrollbars: true,
+  }
 }
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -45,29 +48,37 @@ function createWindow() {
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 
-  const page = mainWindow.webContents;
+  // const page = mainWindow.webContents;
 
-  page.once('did-frame-finish-load', () => {
-    const checkOS = isWindowsOrmacOS();
-    
-    if (checkOS && !isDev) {
-      // Initate auto-updates on macOs and windows
-      appUpdater();
-    }
-  });
+  // page.once('did-frame-finish-load', () => {
 
-  mainWindow.webContents.on('did-finish-load', () => {
-    mainWindow.show();
+  // });
 
-    if (loadingScreen) {
-      let loadingScreenBounds = loadingScreen.getBounds();
-      mainWindow.setBounds(loadingScreenBounds);
-      loadingScreen.close();
-    }
-  });
+  // mainWindow.webContents.on('did-finish-load', () => {
+  //   console.log('did-finish-load')
+  //   const checkOS = isWindowsOrmacOS();
+
+  //   if (checkOS && !isDev) {
+  //     // Initate auto-updates on macOs and windows
+  //     appUpdater();
+  //   }
+
+  //   if (loadingScreen) {
+  //     let loadingScreenBounds = loadingScreen.getBounds();
+  //     mainWindow.setBounds(loadingScreenBounds);
+  //     loadingScreen.close();
+  //   }
+  // });
 
   mainWindow.once('ready-to-show', () => {
-    mainWindow.show()
+
+    if (loadingScreen) {
+      loadingScreen.close();
+    }
+    mainWindow.show();
+    mainWindow.maximize();
+    mainWindow.focus();
+    console.log('ready-to-show')
   })
 
   // Open the DevTools.
@@ -87,10 +98,11 @@ function createWindow() {
 function createLoadingScreen() {
   loadingScreen = new BrowserWindow(Object.assign(windowParams, { parent: mainWindow, modal: true, show: false }));
   loadingScreen.loadURL('file://' + __dirname + '/app/loading.html');
-  loadingScreen.on('closed', () => loadingScreen = null);
-  loadingScreen.webContents.on('did-finish-load', () => {
-    loadingScreen.show();
-  });
+  loadingScreen.on('closed', () => { loadingScreen = null; mainWindow.show() });
+  loadingScreen.show()
+  // loadingScreen.webContents.on('did-finish-load', () => {
+  //   loadingScreen.show();
+  // });
 }
 
 // This method will be called when Electron has finished
@@ -98,9 +110,8 @@ function createLoadingScreen() {
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
   createLoadingScreen()
-  setTimeout(() => {
-    createWindow()
-  }, 20000);
+  createWindow()
+
 
 })
 

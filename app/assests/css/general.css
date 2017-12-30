@@ -52,7 +52,7 @@ html, body{
 
 .footer .online{
     /* content: 'Status: '; */
-    margin: 8px 0;
+    margin: 5px 0;
     /* color: rgb(10, 3, 109); */
 }
 .footer .copyright, .date, .clock{
@@ -60,14 +60,14 @@ html, body{
 }
 
 .footer .setting{
-    margin-top:8px; 
+    margin-top:5px; 
     /* display: none; */
 }
 
 .footer .setting .notice{
     background: rgb(211, 87, 87);
     padding: 3px;
-    margin: -25px 0 0 10px;
+    margin: -23px 0 0 10px;
     position: absolute;
     width: 10px;
     height: 10px;
@@ -77,9 +77,8 @@ html, body{
     text-align: center;
     display: flex;
     justify-content: center;
-    /* display: flex; */
     flex-direction: column;
-    display: none;
+    
 }
 
 #update_cog{

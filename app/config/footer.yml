@@ -1,0 +1,22 @@
+#html for the footer 
+version: 
+  number: 1.0.0
+  icon: '<i class="fa fa-code-fork fa-lg" aria-hidden="true"></i>'
+  parent: '<div class="version"></div>'
+copyright: 
+  info: " &#169; 2018 Knymbus."
+  parent: '<div class="copyright"></div>'
+settings: 
+  icon: '<i class="fa fa-cog fa-lg fa-fw" id="update_cog"></i>'
+  notice_el: '<div class="notice">1</div>'
+  parent: '<div class="setting"></div>'
+online:
+  icon: '<i class="fa fa-cloud fa-lg" aria-hidden="true"></i>'
+  parent: '<div class="online"></div>'
+time:
+  clock: '<div class="clock"></div>'
+  date: '<div class="date"></div>'
+
+
+  
+  
