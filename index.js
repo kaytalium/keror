@@ -18,9 +18,9 @@ let BrowserWindow = electron.BrowserWindow
 let loadingScreen = electron.BrowserWindow
 let windowParams = {
   title: 'Keror',
-  width: 1020,
+  width: 1080,
   height: 720,
-  minWidth: 720,
+  minWidth: 1080,
   minHeight: 720,
   backgroundColor: '#000',//#312450
   show: false,
@@ -46,7 +46,7 @@ function createWindow() {
   mainWindow = new BrowserWindow(windowParams)
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/app/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/dashboard.html`)
 
   // const page = mainWindow.webContents;
 

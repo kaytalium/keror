@@ -47,3 +47,29 @@ export interface LoginUI{
     element: string
     defaultBackground: Object
 }
+
+export interface AppTheme{
+    default: DefaultTheme
+    dark: DefaultTheme
+    
+
+}
+
+interface DefaultTheme{
+    backgroundTheme: BackgroundTheme,
+    info: InfoOnBackgroundTheme
+}
+
+interface BackgroundTheme{
+    'background-color': string
+    'background-image': string
+    'background-size': string
+}
+    
+  interface InfoOnBackgroundTheme{
+    image: string
+    url: string
+    imageUrl: string
+    file: string
+  }
+    

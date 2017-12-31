@@ -1,0 +1,23 @@
+---
+# Application Theme #############################################################
+################################################################################
+default:
+  backgroundTheme:
+    background-color: '#34150'
+    background-image: "url('./assests/img/bg1.jpg')"
+    background-size: "cover"
+  info:
+    image: "bg1.jpg"
+    url: "assests/img/"
+    imageUrl: "./app/assests/img/bg1.jpg"
+    file: "assests/css/default.css"
+
+dark:
+  backgroundTheme:
+    background-color: '#000'
+    background-image: "url('./assests/img/bg7.jpg')"
+    background-size: "cover"
+  info:
+    image: "bg1.jpg"
+    url: "assests/img/"
+    imageUrl: "./app/assests/img/bg7.jpg"
