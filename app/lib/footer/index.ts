@@ -26,7 +26,7 @@ const fs = require('fs');
 /**
  * Import application clock to display time on ui and set timmer for ui elements
  */
-import { Clock } from './../widgets/clock'
+import { Clock } from './../widgets'
 import { settings } from 'cluster';
 
 export module footer {

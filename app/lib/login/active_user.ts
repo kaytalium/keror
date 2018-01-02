@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 import { ActiveUser } from './../interface'
-import { timer } from "./../widgets/clock"
+import { timer } from "./../widgets"
 
 var users: Array<ActiveUser> = [
     {

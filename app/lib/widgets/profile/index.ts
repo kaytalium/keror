@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
-import * as interfaces from './interface'
-import { notifier } from './lib/notification'
+import * as interfaces from './../../interface'
+import { notifier } from './../notification'
 import { EventEmitter } from 'events';
 import { setTimeout, setInterval } from 'timers';
 

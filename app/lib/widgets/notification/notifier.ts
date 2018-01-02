@@ -1,4 +1,4 @@
-import * as AppInterfaces from './../interface'
+import * as AppInterfaces from './../../interface'
 
 
 export module notifier{
