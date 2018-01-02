@@ -1,10 +1,10 @@
 import * as $ from 'jquery';
-import { ActiveUser } from './interface'
-import { timer } from "./clock"
+import { ActiveUser } from './../interface'
+import { timer } from "./../footer/clock"
 
 var users: Array<ActiveUser> = [
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Ovel Heslop",
         firstname: "Ovel",
         lastname: "Heslop",
@@ -14,77 +14,77 @@ var users: Array<ActiveUser> = [
         background_url: "default"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "John Brown",
         firstname: "John",
         lastname: "Brown",
         status: "inactive",
         username: "brownJe@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg2.jpg"
+        background_url: "./assets/img/bg2.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Tamele Heslop",
         firstname: "Tamele",
         lastname: "Heslop",
         status: "inactive",
         username: "heslopta@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg3.jpg"
+        background_url: "./assets/img/bg3.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Zamir Heslop",
         firstname: "Zamir",
         lastname: "Heslop",
         status: "inactive",
         username: "heslopze@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg4.jpg"
+        background_url: "./assets/img/bg4.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Zuri Heslop",
         firstname: "Zuri",
         lastname: "Heslop",
         status: "inactive",
         username: "heslopzee@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg5.jpeg"
+        background_url: "./assets/img/bg5.jpeg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Morlan Wilson",
         firstname: "Morlan",
         lastname: "Wilson",
         status: "inactive",
         username: "wilsonmm@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg6.jpg"
+        background_url: "./assets/img/bg6.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Theodore Robinson",
         firstname: "Theodore",
         lastname: "Robinson",
         status: "inactive",
         username: "robinsontd@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg7.jpg"
+        background_url: "./assets/img/bg7.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Veronique Pitter",
         firstname: "Veronique",
         lastname: "Pitter",
         status: "inactive",
         username: "pittervf@gmail.com",
         background_theme: true,
-        background_url: "./assests/img/bg3.jpg"
+        background_url: "./assets/img/bg3.jpg"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Jodie Henry",
         firstname: "Jodie",
         lastname: "Henry",
@@ -94,7 +94,7 @@ var users: Array<ActiveUser> = [
         background_url: "default"
     },
     {
-        image: "./default.png",
+        image: "./assets/img/default.png",
         fullname: "Rochelle Crawford",
         firstname: "Rochelle",
         lastname: "Crawford",
@@ -151,9 +151,6 @@ $(document).ready(function () {
             if (el.background_theme) {
                 $('body').css({ "background": "url('" + el.background_url + "')", "background-size": "cover" })
             }
-            else {
-                $('body').css({ "background": "url('./assests/img/bg1.jpg')", "background-size": "cover" })
-            }
 
         }
         sidebar_display.append(templ_sidebar_user(el))
@@ -199,7 +196,7 @@ $(document).ready(function () {
             if (newUser[0].background_theme)
                 $('body').css({ "background": "url('" + newUser[0].background_url + "')", "background-size": "cover" })
             else
-                $('body').css({ "background": "url('./assests/img/bg1.jpg')", "background-size": "cover" })
+                $('body').css({ "background": "url('./assets/img/bg1.jpg')", "background-size": "cover" })
 
             //$(document).prop('title', 'Active user - ' + newUser[0].fullname);
             active_user = $('.user')

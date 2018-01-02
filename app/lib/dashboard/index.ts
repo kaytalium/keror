@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
-import { AppTheme } from './interface'
-import './footer'
-import { DataSearch, Calculator, Detector } from './lib/searchable'
-import './user_profile'
+import { AppTheme } from './../interface'
+import { footer } from './../footer'
+import { DataSearch, Calculator, Detector } from './../widgets/searchEngine'
+
 
 
 /**
@@ -28,10 +28,12 @@ try {
     console.log(e);
 }
 
+footer.load()
+
 $(document).ready(function () {
     $('body').css(Object.assign(appTheme.default.backgroundTheme))
     $('head').append('<link rel="stylesheet" href="' + appTheme.default.info.file + '" type="text/css" />');
-    $('head').append('<link rel="stylesheet" href="assests/css/profile.css" type="text/css" />');
+   // $('head').append('<link rel="stylesheet" href="assests/css/profile.css" type="text/css" />');
 
     let input = $('.search').children('input')
     let ul = $('.s-info').children('ul')
@@ -113,20 +115,20 @@ $(document).ready(function () {
     /**
      * esc key and off click for the search result 
      */
-    $(document).keyup(e=>{
+    $(document).keyup(e => {
         let key = e.keyCode || e.charCode
 
-        if(key == 27)
-        SEARCH_RESULT_ELEMENTS.container.fadeOut('slow')
+        if (key == 27)
+            SEARCH_RESULT_ELEMENTS.container.fadeOut('slow')
     })
 
-    $(document).click(function(e){
-        let obj = ['s-co-icon','s-result-count','s-footer','result','s-search-result-holder','s-input','word','s-result-note']
+    $(document).click(function (e) {
+        let obj = ['s-co-icon', 's-result-count', 's-footer', 'result', 's-search-result-holder', 's-input', 'word', 's-result-note']
         let target = e.target.className;
 
-        if(obj.indexOf(target)<0)
+        if (obj.indexOf(target) < 0)
             SEARCH_RESULT_ELEMENTS.container.fadeOut('slow')
-    
+
     })
 
 

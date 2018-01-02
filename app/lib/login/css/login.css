@@ -116,3 +116,14 @@
 
 
 }
+
+.backdrop{
+    /* background: #fff; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    z-index: -100;
+    filter: blur(2px);
+    opacity: .3;
+}

@@ -1,8 +1,8 @@
-import { TimeState } from "./interface";
+import { TimeState } from "./../interface";
 import { Observable } from 'rxjs'
 
 
-export module clock {
+export module Clock {
 
     let days = ['Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat']
     let mnth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -43,7 +43,7 @@ export module clock {
             state.hrs = (hrs == 0 ? 12 : hrs)
         }
 
-        state.fullTime = state.hrs.toString() + ":" + state.min + ":" + state.sec + " " + state.mid;
+        state.fullTime = state.hrs.toString() + ":" + state.min + " " + state.mid;
         return state;
     }
 
@@ -57,7 +57,7 @@ export module clock {
         let day = now.getDay();
         let month = now.getMonth();
 
-        let fullday = days[day] + " " + mnth[month] + " " + date
+        let fullday = days[day] + " " + date + " " + mnth[month]
         return fullday;
     }
 

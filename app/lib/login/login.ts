@@ -1,7 +1,7 @@
 /**
  * import interface
  */
-import {LoginUI} from './interface'
+import {LoginUI} from './../interface'
 
 /**
  * import js-yaml to handle my .yml config files  
@@ -23,8 +23,8 @@ import $ = require('jquery');
 let loginUI: LoginUI;
 
 try {
-    loginUI = yaml.safeLoad(fs.readFileSync('./app/config/login.yml', 'utf8'));
-    console.log(loginUI)
+    loginUI = yaml.safeLoad(fs.readFileSync('./app/lib/login/login.yml', 'utf8'));
+   // console.log(loginUI)
 } catch (e) {
     console.log(e);
 }

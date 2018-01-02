@@ -6,15 +6,44 @@ const storage = require('electron-json-storage');
 /**
  * import the footer constrol module
  */
-import { footer } from './footer/footer'
+import { footer } from './footer/'
+
+/**
+ *get the login module views 
+ */
+import * as login from './login/views'
 
 
 /**
  * Import jquery module to support ui interaction
  */
 import * as $ from 'jquery';
+import { filter } from 'rxjs/operators/filter';
 
 footer.load();
+
+$(document).ready(function () {
+    $('body').css({
+        margin: 0,
+        padding: 0,
+        height: '100vh',
+        overflow: 'hidden',
+        color: "#fff",
+        opacity: 0.95,
+        background: 'url("./assets/img/bg1.jpg")',
+        'background-size': 'cover'
+        
+    })
+
+    $('.wrapper').css({
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        'text-align': 'center',
+        'justify-content': 'center',
+        'flex-direction': 'column',
+    })
+})
 
 /**
  * Before any UI is loaded the system must check the state of the app
@@ -23,10 +52,10 @@ footer.load();
  * if no user is logged in then run login module
  */
 storage.get('logged_users', function (err, data) {
-
+    
     //if here is an err then run the login module
     if (err)
-        $('.content').load("./views/authenticate/login.html")
+        $('.content').append(login.main_login())
 
     //if data, then get the users list and setup vars
     let users = data.users;
@@ -38,7 +67,7 @@ storage.get('logged_users', function (err, data) {
             isLoggin = false;
         }
     });
-    $('.content').load("./views/authenticate/login.html")
+    $('.content').append(login.active_user())
     //load the modules base on response from loop
     // if (isLoggin) {
     //     $('.content').load("./views/authenticate/login.html")
