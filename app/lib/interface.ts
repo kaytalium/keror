@@ -1,4 +1,4 @@
-import { settings } from "cluster";
+
 
 export interface User {
     username: any,
@@ -27,49 +27,60 @@ export interface TimeState {
     fullTime: string
 }
 
-export interface FooterSettings{
+export interface FooterSettings {
     version: Vision
-    copyright: {info: string, parent:string}
-    settings:{icon:string, notice_el: string, parent: string}
-    online: {icon:string, parent: string}
-    time: {clock:string, date: string}
+    copyright: { info: string, parent: string }
+    settings: { icon: string, notice_el: string, parent: string }
+    online: { icon: string, parent: string }
+    time: { clock: string, date: string }
 }
 
-interface Vision{
-    number:'',
-    icon:'',
+interface Vision {
+    number: '',
+    icon: '',
     parent: string
 }
 
-export interface LoginUI{
+export interface LoginUI {
     app_name: string
     trademark: string
     element: string
     defaultBackground: Object
 }
 
-export interface AppTheme{
+export interface AppTheme {
     default: DefaultTheme
     dark: DefaultTheme
-    
+
 
 }
 
-interface DefaultTheme{
+interface DefaultTheme {
     backgroundTheme: BackgroundTheme,
     info: InfoOnBackgroundTheme
 }
 
-interface BackgroundTheme{
+interface BackgroundTheme {
     'background-color': string
     'background-image': string
     'background-size': string
 }
-    
-  interface InfoOnBackgroundTheme{
+
+interface InfoOnBackgroundTheme {
     image: string
     url: string
     imageUrl: string
     file: string
-  }
-    
+}
+
+
+export interface NotificationMessage {
+    id: string
+    imageUrl: string
+    title: string
+    info: string
+    read: boolean
+    status: string
+    category: string
+}
+

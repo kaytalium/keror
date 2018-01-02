@@ -6,13 +6,15 @@ const storage = require('electron-json-storage');
 /**
  * import the footer constrol module
  */
-import './footer'
+import { footer } from './footer/footer'
 
 
 /**
  * Import jquery module to support ui interaction
  */
 import * as $ from 'jquery';
+
+footer.load();
 
 /**
  * Before any UI is loaded the system must check the state of the app

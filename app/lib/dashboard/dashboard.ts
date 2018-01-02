@@ -2,6 +2,7 @@ import * as $ from 'jquery';
 import { AppTheme } from './interface'
 import './footer'
 import { DataSearch, Calculator, Detector } from './lib/searchable'
+import './user_profile'
 
 
 /**
@@ -30,6 +31,7 @@ try {
 $(document).ready(function () {
     $('body').css(Object.assign(appTheme.default.backgroundTheme))
     $('head').append('<link rel="stylesheet" href="' + appTheme.default.info.file + '" type="text/css" />');
+    $('head').append('<link rel="stylesheet" href="assests/css/profile.css" type="text/css" />');
 
     let input = $('.search').children('input')
     let ul = $('.s-info').children('ul')

@@ -22,7 +22,7 @@ let windowParams = {
   height: 720,
   minWidth: 1080,
   minHeight: 720,
-  backgroundColor: '#000',//#312450
+  backgroundColor: '#312450',
   show: false,
   webpreferences: {
     overlayScrollbars: true,
@@ -46,7 +46,7 @@ function createWindow() {
   mainWindow = new BrowserWindow(windowParams)
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/app/dashboard.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 
   // const page = mainWindow.webContents;
 
