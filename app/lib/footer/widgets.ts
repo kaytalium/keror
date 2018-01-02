@@ -26,20 +26,10 @@ const fs = require('fs');
 /**
  * Import application clock to display time on ui and set timmer for ui elements
  */
-import { Clock } from './clock'
+import { Clock } from './../widgets/clock'
 import { settings } from 'cluster';
 
 export module footer {
-    /**
-     * create var for holding the data coming from the footer.yml file
-     */
-    let footerSettings: FooterSettings;
-
-    try {
-        footerSettings = yaml.safeLoad(fs.readFileSync('./app/config/footer.yml', 'utf8'));
-    } catch (e) {
-        console.log(e);
-    }
 
     /**
      * Get the footer style from the yaml file
@@ -54,7 +44,7 @@ export module footer {
     /**
      * Get the current app version to display in ui
      */
-    var APPVERSION = footerSettings.version.number
+    var APPVERSION = '1.0.0'
 
     export let load = () => {
 
