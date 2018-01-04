@@ -11,38 +11,16 @@
 
 
 .p-avatar{
-    width: 40px;
-    height: 40px;
-    background: url('./../img/default.png') peru;
+    width: 30px;
+    height: 30px;
+    background: url('./../../../assets/img/default.png') peru;
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.p-notification-indicator{
-    
-    background: peru;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: -30px 0 0 0;
-    position: absolute;
-    cursor: pointer;
-    font-size: 12px;
-    
-}
 
-.profile > .p-holder{
-/* background: RED; */
-padding: 0;
-width: 110px;
-float: right;
-margin: 20px 10px;
-}
+
 
 .profile > .p-holder li{
     display: inline-block;
@@ -59,7 +37,7 @@ margin: 20px 10px;
     height: 230px;
     background: #eaeaea;
     margin-top: 25px;
-    right: 20px;
+    right: 57px;
     z-index: 999;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius:  5px;
@@ -77,7 +55,7 @@ margin: 20px 10px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: url('./../img/default.png')  rgb(238, 235, 235);
+    background: url('./../../../assets/img/default.png')  rgb(238, 235, 235);
     background-size: cover;
     margin: 20px 10px; 
     float: left;
@@ -140,280 +118,4 @@ margin: 20px 10px;
 
 .mini-footer-btn:hover{
     background: peru;
-}
-
-
-/******************************************************* 
- *               Notification Dropdown
-********************************************************/
-.p-notification-detail{
-    width: 370px;
-    height: 400px;
-    background: #EEEEEE;
-    position: absolute;
-    right: 75px;
-    margin-top: 25px;
-    z-index: 999;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: none;
-    /* overflow: hidden; */
-}
-
-.p-notification-au{
-    float: right;
-    margin-top: -10px;
-    margin-right: 20px;
-    border-bottom: 10px solid #EEEEEE;
-}
-
-.p-notification-header{
-    height: 50px;
-    /* background: red; */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 25px;
-    color: #B0B0B0;
-}
-
-.p-notification-list{
-    padding: 0;
-    margin: 0;
-    width: 370px;
-    height: 333px;
-    /* background: peru; */
-    overflow-y: scroll;
-    
-}
-
-.p-notification-list > li.pnl{
-    width: 340px;
-    height: 50px;
-    background: #EEEEEE;
-    display: list-item;
-    margin: 5px 10px;
-    padding: 5px;
-    
-    overflow: hidden;
-    box-shadow: 2px 2px 2px #979393;
-    cursor: pointer;
-    color: rgb(104, 102, 102);
-    border-radius: 3px;
-    z-index: 999;
-}
-
-.p-notification-list > li.pnl:first-child{
-    margin-top: 10px;
-}
-
-
-.p-notification-list-ih{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #979393;
-    background: url('./../img/default.png')  rgb(238, 235, 235);
-    background-size: cover;
-    float: left;
-}
-
-.p-notification-list-info{
-    float: left;
-    width: 283px;
-    margin-left: 5px;
-}
-
-.p-notification-list-info-status{
-    width: auto;
-    color: red;
-    float: right;
-    clear: both;
-    font-size: 12px;
-    margin-right: 10px;
-    text-transform: lowercase;
-}
-
-.p-notification-list-info-status::before{
-    content: '*';
-}
-.p-notification-list-info-title{
-    /* background: red; */
-    font-size: 17px;
-    color: #000000;
-    text-transform: capitalize;
-    margin-top: 10px;
-    margin-bottom: 2px;
-}
-
-.p-notification-list-info-detail{
-    width: 100%;
-    height: 17px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-/* arrows */
-
-
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    /* border-bottom: 10px solid transparent; */
-  }
-  
-  .arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    
-    border-top: 20px solid #f00;
-  }
-  
-  .arrow-right {
-    width: 0; 
-    height: 0; 
-    border-top: 60px solid transparent;
-    border-bottom: 60px solid transparent;
-    
-    border-left: 60px solid green;
-  }
-  
-  .arrow-left {
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    
-    border-right:10px solid blue; 
-  }
-
-
-
-/******************************************************* 
- *               Notification Dropdown
-********************************************************/
-
-.notification-view{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-    
-
-}
-
-.nv-cover{
-    height: 100vh;
-    width: 100vw;
-    background: #eaeaea;
-    background-size: cover;
-    filter: blur(1px);
-    position: absolute;
-    opacity: .7;
-}
-
-.nv-model{
-    z-index: 9999;
-    margin: auto auto;
-    background: #fff;
-    border: 1px solid rgba(223, 223, 223, 0.7);
-    box-shadow: 2px 2px 2px #979393;
-    min-width: 500px;
-    width: 360px;
-    height: 290px;
-    color: #000000;
-    /* overflow: hidden; */
-    
-
-}
-
-.nv-header{
-    width: 100%;
-    height: 50px;
-    background: peru;
-    
-}
-
-.nv-close{
-    float: right;
-    margin-right: 10px;
-    color: #fff;
-    cursor: pointer;
-    opacity: .7;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    font-size: 30px;
-    
-}
-
-.nv-close:hover{
-    opacity: 1;
-}
-
-.nv-title{
-    width: auto;
-    float: left;
-    padding: 12px;
-    /* height: 100%; */
-    vertical-align: center;
-    text-transform: capitalize;
-
-    text-shadow: 1px 1px rgba(0, 0, 0, .1);
-    font-family: 'Lato', serif;
-    font-weight: 700;
-    font-size: 22px;
-    overflow: hidden;
-}
-
-/* nv-content */
-.nv-content{
-    /* background:#fff; */
-    width: 100%;
-    height: 150px;
-    opacity: 1;
-    /* overflow: hidden; */
-
-}
-
-.nv-info{
-    width: 93%;
-    height: 400px;
-    padding: 15px;
- 
-    text-shadow: 1px 1px rgba(0, 0, 0, .1);
-    font-family: 'Lato', serif;
-    font-size: 20px;
-    /* overflow-y: scroll; */
-}
-
-.nv-btn{
-    background: peru;;
-    /* margin-top: -10px; */
-    /* position: absolute; */
-    width: 100px;
-    min-width: 90px;
-    padding: 12px;
-    text-transform: capitalize;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #292828;
-}
-
-.nv-btn:hover{
-    background: rgb(224, 151, 77);
-    color: #000000;
 }
