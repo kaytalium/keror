@@ -22,11 +22,11 @@
 
 
 
-.profile > .p-holder li{
+.profile > .p-holder > li{
     display: inline-block;
     /* background: gold; */
     width: 45px;
-    height: 100%;
+    height: 100%; 
     
 }
 
@@ -36,11 +36,11 @@
     width: 320px;
     height: 230px;
     background: #eaeaea;
-    margin-top: 25px;
-    right: 57px;
+    margin-top: 30px;
+    right: 25px;
     z-index: 999;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius:  5px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius:  3px;
     display: none;
 }
 
@@ -48,40 +48,78 @@
     float: right;
     margin-top: -10px;
     margin-right: 20px;
-    border-bottom: 10px solid #eaeaea;
+    border-bottom: 10px solid rgb(212, 212, 212);
 }
 
+.profile-detail-header{
+    background: rgb(212, 212, 212);
+    height: 80px;
+}
+
+
 .mini-avatar{
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: url('./../../../assets/img/default.png')  rgb(238, 235, 235);
     background-size: cover;
-    margin: 20px 10px; 
+    margin: 10px 15px; 
     float: left;
     cursor: pointer;
 }
 
 .mini-profile-info{
     float: left;
-    height: 60%;
-    width: 180px;
+    height: 100%;
+    width: 230px;
     text-align: left;
     color: #000000;
-    margin-top: 40px;
-    /* background: red; */
+    padding-top: 15px;
 }
 
 .mini-profile-info >  .p-username{
     margin-bottom: 0px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    /* background: red; */
     
 }
 
 .mini-profile-info > .p-usertype{
-    margin-top: 15px;
+    margin-top: 5px;
     color: rgb(27, 27, 139);
+}
+
+.mini-info > ul{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    text-align: left;
+    /* border-bottom: 1px solid #c5c5c5; */
+}
+
+.mini-info > ul > li{
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+.mini-info > ul > li:hover{
+    background: #dfdede;
+}
+
+.mini-info > ul > li > i{
+    color: #7c7a7a;
+    font-size: 22px;
+    width: 35px;
+    margin-left: 35px;
+    text-align: left;    
+}
+
+.mini-info > ul > li > span{
+    margin-left: 20px;
 }
 
 .mini-footer{
@@ -89,8 +127,8 @@
     float: left;
     height: 58px;
     width: 100%;
-    border-top: 2px solid #979393;
-    background: #bebdbd;
+    border-top: 1px solid #979393;
+    /* background: #bebdbd; */
     border-bottom-right-radius: 5px;
     border-bottom-left-radius:  5px;
 }

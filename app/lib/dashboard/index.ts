@@ -4,6 +4,7 @@ import { footer } from './../footer'
 import { searchEngine } from './../widgets/searchEngine'
 import { notifier } from './../widgets/notification'
 import { profile } from './../widgets/profile'
+import {cms} from './../views/cms'
 
 
 
@@ -57,12 +58,30 @@ $(document).ready(function () {
     $('body').css(Object.assign(appTheme.default.backgroundTheme))
     $('head').append('<link rel="stylesheet" href="' + appTheme.default.info.file + '" type="text/css" />');
 
-
+    //setup the class for the hearder menu settings  
     $('.settings').addClass('header-settings')
-    $('document').resize(function(){
-        console.log($(this).outerWidth())
+
+    //getting the sidebar links element
+    let sidebar_li = $('.sidebar-menu').children('li')
+
+    let title = $('.kd-title').children('h1')
+    let titleHolder = $('.kd-title')
+
+    let main_router = $('.main-router')
+
+
+    // title.css({opacity:0})
+    sidebar_li.click('click', function (e) {
+
+        let data = $(this).attr('data-menu')
+        title.html(data)
+        titleHolder.addClass('load')
+
+        main_router.css({ opacity: 1 })
+        if(data=='list')
+        main_router.html(cms.load())
+        console.log(data)
     })
-    console.log($('.kd-content').width())
-    
+
 })
 

@@ -42,10 +42,33 @@ export module profile {
         $(document).ready(function () {
 
             let styleURL = `file://${__dirname}/profile.css`
-            //Add search style to the document
+            //Add profile style to the document
             $('head').append('<link rel="stylesheet" href="' + styleURL + '" type="text/css" />');
 
+            let UI = '<div class="p-avatar"></div>'+
 
+            '<div class="p-avatar-detail">'+
+                '<div class="arrow-up p-avatar-detail-au"></div>'+
+                '<div class="profile-detail-header">'+
+                    '<div class="mini-avatar" title="Click to edit profile"></div>'+
+                    '<div class="mini-profile-info">'+
+                        '<div class="p-username">Ovel Heslop</div>'+
+                        '<div class="p-useremail">kayheslop@gmail.com</div>'+
+                        '<div class="p-usertype">Administrator</div>'+
+                    '</div>'+
+                '</div>'+
+                    '<div class="mini-info">'+
+                        '<ul>'+
+                            '<li><i class="fa fa-user" aria-hidden="true"></i><span>My Account</span></li>'+
+                            '<li><i class="fa fa-lock" aria-hidden="true"></i><span>Lock Screen</span></li>'+
+                            '<li><i class="fa fa-sign-out" aria-hidden="true"></i><span>Sign Out</span></li>'+
+                        '</ul>'+
+                    '</div>'+
+            '</div>';
+
+            let anchor = $('profile')
+
+            anchor.append(UI)
 
             let PROFILE_ELEMENTS = {
                 p_avatar_el: $('.p-avatar'),

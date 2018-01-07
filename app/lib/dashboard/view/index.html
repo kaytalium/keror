@@ -16,6 +16,16 @@
                 <div class="co-name">keror</div>
                 <div class="tagline">Financial Management</div>
             </div>
+            <div class="sidebar-profile">
+                <div class="sp-holder"></div>
+                <div class="sp-info"><div class="span">Ovel Heslop</div>  <div class="span">Administrator</div></div>
+            </div>
+            <ul class="sidebar-menu">
+                <li data-menu="dashboard"><span><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</span></li>
+                <li data-menu="list"><span><i class="fa fa-table" aria-hidden="true"></i> List</span></li>
+                <li data-menu="report"><span><i class="fa fa-line-chart" aria-hidden="true"></i> Report</span></li>
+                
+            </ul>
         </sidebar>
 
         <content>
@@ -24,7 +34,7 @@
                 <div class="settings">
 
                     <div class="header-settings-widgets">
-                        
+
                         <!-- header Search -->
                         <div class="kheader_search">
                             <searchwidget></searchwidget>
@@ -38,34 +48,26 @@
                         <!-- header Profile -->
                         <div class="kheader-profile">
                             <profile></profile>
-                            <div class="p-avatar"></div>
-
-                            <div class="p-avatar-detail">
-                                <div class="arrow-up p-avatar-detail-au"></div>
-
-                                <div class="mini-avatar" title="Click to edit profile"></div>
-                                <div class="mini-profile-info">
-                                    <div class="p-username">Ovel Heslop</div>
-                                    <div class="p-useremail">kayheslop@gmail.com</div>
-                                    <div class="p-usertype">Administrator</div>
-                                    <div class="p-myaccount mini-footer-btn">My Account</div>
-                                </div>
-
-                                <div class="mini-footer">
-                                    <div class="lock-screen mini-footer-btn">Lock screen</div>
-                                    <div class="logout mini-footer-btn">Sign out</div>
-
-                                </div>
-                            </div>
                         </div>
+
                     </div>
                 </div>
             </header>
-            <content-wrapper>
-                    <div class="kd-title">
-                            <h1>Dashboard</h1>
-                        </div>
-            </content-wrapper>
+            <div class="main-router">
+                <div class="kd-title">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="listView">
+                    <table>
+                        <tr>
+                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Balance</th>
+                            <th>Last Payment Date</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </content>
     </wrapper>
 

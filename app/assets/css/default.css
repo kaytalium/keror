@@ -42,6 +42,8 @@ sidebar{
     text-align: center;
     display: flex;
     flex-direction: column;
+    clear: both;
+    
 }
 
 .logo > .co-name{
@@ -62,6 +64,88 @@ font-size: 8px;
     font-size: 12px;
     letter-spacing: 1px;
 }
+
+.sidebar-profile{
+    height: 100px;
+    clear: both;
+    overflow: hidden;
+    border-bottom: 1px solid #272727;
+    
+    
+}
+
+.sp-holder{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: url('../img/default.png');
+    background-size: cover;
+}
+
+.sp-info{
+    float: left;
+    width: 120px;
+    height: 100%;
+    padding-top: 35px;
+}
+
+.sp-info > .span{
+    margin-left: 10px;
+    padding-top: 5px; 
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90%;
+}
+
+.sp-info > .span:nth-child(2){
+    font-size: 12px;
+}
+
+ul.sidebar-menu{
+    width: 100%;
+    /* background: red; */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    height: 100%;
+    /* margin-top: 70px; */
+    clear: both;
+}
+
+ul.sidebar-menu > li{
+    height: 50px;
+    /* background: #f00; */
+    color: #fff;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid #272727;
+}
+
+ul.sidebar-menu > li:hover{
+    background: rgba(255, 166, 0, 0.712);/*rgb(95, 95, 95);*/
+    text-decoration: underline;
+}
+
+ul.sidebar-menu > li > span{
+    margin-left: 35px; 
+}
+
+ul.sidebar-menu > li > span > i{
+    margin-right: 10px;
+    color: peru;
+}
+
 
 /****************************************
  *          Page content sytle
@@ -140,11 +224,107 @@ header{
      padding: 0 10px;
      /* background: red; */
      text-transform: uppercase;
-     font-size: 0.7em;
-     
+     font-size: 0.7em;  
  }
 
 
+
+ /*******************************************************
+  *         Inner Content Container
+ *******************************************************/
+
+ .main-router{
+     opacity: 0;
+     /* background: rgb(224, 21, 21); */
+     width: 100%;
+     height: 100%;
+     transition: opacity 1s ease-in;
+ }
+
+ @keyframes fadein{
+    from {opacity: 0}
+    to{opacity: 1;}
+ }
+
+ @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+ /*******************************************************
+  *                 Media Queries
+ *******************************************************/
 
  @media screen and (max-width: 1263px) {
     content {
