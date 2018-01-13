@@ -4,7 +4,7 @@ import { footer } from './../footer'
 import { searchEngine } from './../widgets/searchEngine'
 import { notifier } from './../widgets/notification'
 import { profile } from './../widgets/profile'
-import {cms} from './../views/cms'
+import { cms } from './../views/cms'
 
 
 
@@ -74,13 +74,27 @@ $(document).ready(function () {
     sidebar_li.click('click', function (e) {
 
         let data = $(this).attr('data-menu')
-        title.html(data)
-        titleHolder.addClass('load')
+
 
         main_router.css({ opacity: 1 })
-        if(data=='list')
-        main_router.html(cms.load())
-        console.log(data)
+        if (data == 'list') {
+            main_router.html('')
+            main_router.append(cms.load())
+            cms.loadTableData()
+        }
+
+        if (data == 'dashboard') {
+            main_router.html('')
+            titleHolder.addClass('load')
+            title.html(data).appendTo(main_router)
+        }
+
+        if (data == 'report') {
+            main_router.html('')
+            title.html(data)
+            titleHolder.addClass('load')
+        }
+
     })
 
 })
