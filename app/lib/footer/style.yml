@@ -1,13 +1,13 @@
 footer:
-  height: '3.6vh'
+  height: '3.4vh'
   'line-height': '3.5vh'
   width: '100%'
   position: "absolute"
   bottom: 0
-  'font-size': '14px'
+  'font-size': '12px'
   background: '#1074C2'
   overflow: 'hidden'
-  'font-family': 'Arial, Helvetica, sans-serif'
+  'font-family': 'Verdana, Geneva, sans-serif'
   color: "#fff"
 
 cog:
