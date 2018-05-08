@@ -1,7 +1,7 @@
 /**
  * import interface
  */
-import { FooterSettings } from './../interface'
+import { AppInterface } from './../interface'
 
 /**
  * import network status to display play the state of the internet to the app
@@ -26,7 +26,7 @@ const fs = require('fs');
 /**
  * Import application clock to display time on ui and set timmer for ui elements
  */
-import { Clock } from './../widgets'
+import { Clock } from 'kplugins'
 import { settings } from 'cluster';
 
 export module footer {

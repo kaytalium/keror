@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
-import { ActiveUser } from './../interface'
-import { timer } from "./../widgets"
+import { AppInterface as AI } from './../interface'
+import { timer } from "kplugins"
 
-var users: Array<ActiveUser> = [
+var users: Array<AI.ActiveUser> = [
     {
         image: "./assets/img/default.png",
         fullname: "Ovel Heslop",
@@ -105,7 +105,7 @@ var users: Array<ActiveUser> = [
     }
 
 ],
-    template_user = (user: ActiveUser) => {
+    template_user = (user: AI.ActiveUser) => {
         return '<div class="user">' +
             '<div class="profile_img ' + user.status + '">' +
             '<img src="' + user.image + '" height="120" alt="">' +
@@ -113,7 +113,7 @@ var users: Array<ActiveUser> = [
             '<div class="name">' + user.fullname + '</div>' +
             '</div>';
     },
-    templ_sidebar_user = (user: ActiveUser) => {
+    templ_sidebar_user = (user: AI.ActiveUser) => {
         return '<div class="view" data-username="' + user.username + '">' +
             '<div class="circle">' +
             '<img src="' + user.image + '" width="50" alt="">' +
@@ -187,7 +187,7 @@ $(document).ready(function () {
          */
         view.click(function () {
             let username = $(this).data('username');
-            let newUser: Array<ActiveUser> = users.filter(function (el) {
+            let newUser: Array<AI.ActiveUser> = users.filter(function (el) {
                 return el.username == username
             })
 

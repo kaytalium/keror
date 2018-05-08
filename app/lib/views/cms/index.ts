@@ -1,6 +1,6 @@
 import * as $ from 'jquery'
 import './objectExtensions'
-import { notes } from '../../widgets/notes'
+
 export module cms {
 
     var container;

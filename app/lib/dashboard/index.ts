@@ -1,9 +1,7 @@
 import * as $ from 'jquery';
 import { AppInterface } from './../interface'
 import { footer } from './../footer'
-import { searchEngine } from './../widgets/searchEngine'
-import { notifier } from './../widgets/notification'
-import { profile } from './../widgets/profile'
+import { searchnginx, notification, profile } from 'kplugins'
 import { cms } from './../views/cms'
 
 
@@ -38,12 +36,12 @@ footer.load()
 /**
  * Load the search widget 
  */
-searchEngine.load()
+searchnginx.load()
 
 /**
  * Load the notification widget
  */
-notifier.load()
+notification.load()
 
 /**
  * Load the Profile 

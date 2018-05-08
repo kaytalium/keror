@@ -1,7 +1,7 @@
 /**
  * import interface
  */
-import {LoginUI} from './../interface'
+import {AppInterface as AI} from './../interface'
 
 /**
  * import js-yaml to handle my .yml config files  
@@ -20,7 +20,7 @@ import $ = require('jquery');
 /**
  * create var for holding the data coming from the footer.yml file
  */
-let loginUI: LoginUI;
+let loginUI: AI.LoginUI;
 
 try {
     loginUI = yaml.safeLoad(fs.readFileSync('./app/lib/login/login.yml', 'utf8'));

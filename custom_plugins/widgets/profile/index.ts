@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
-import { AppInterface } from './../../interface'
-import { notifier } from './../notification'
+import { PluginInterface } from './../../interface'
+import { notification } from 'kplugins'
 import { EventEmitter } from 'events';
 import { setTimeout, setInterval } from 'timers';
 
@@ -20,7 +20,7 @@ export module profile {
     /**
      * create var for holding the data coming from the footer.yml file
      */
-    let appTheme: AppInterface.AppTheme;
+    let appTheme: PluginInterface.AppTheme;
 
     try {
         let data = fs.readFileSync('./app/config/appTheme.yml', 'utf8');

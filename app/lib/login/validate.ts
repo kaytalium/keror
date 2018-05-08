@@ -1,5 +1,5 @@
 const storage = require('electron-json-storage');
-import {User} from './interface'
+import {AppInterface as AI} from './../interface'
 import $ = require('jquery'); 
 class validate {
     
@@ -7,7 +7,7 @@ class validate {
 
     }
 
-    public isCleanAndValidated = function (user:User):boolean{
+    public isCleanAndValidated = function (user:AI.User):boolean{
         var state = true;
         var err = {
             usr_i:  $('#'+user.username.name),

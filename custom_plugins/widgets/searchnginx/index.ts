@@ -1,6 +1,5 @@
 import * as $ from 'jquery'
-import { empty } from 'rxjs/observable/empty';
-export module searchEngine {
+export module searchnginx {
 
     /**
      * search ui structure

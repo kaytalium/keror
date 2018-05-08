@@ -1,5 +1,5 @@
 
-export module AppInterface {
+export module PluginInterface {
     
     export interface User {
         username: any,

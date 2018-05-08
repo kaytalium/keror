@@ -1,4 +1,4 @@
-import { TimeState } from "./../interface";
+import { PluginInterface as PI} from "./../interface";
 import { Observable } from 'rxjs'
 
 
@@ -10,7 +10,7 @@ export module Clock {
         return Observable.create(function (obs) {
             setInterval(function () {
                 let now: Date = new Date()
-                let time: TimeState = standard(now);
+                let time: PI.TimeState = standard(now);
                 obs.next(time.fullTime)
             }, 1000);
         })
@@ -21,13 +21,13 @@ export module Clock {
      * This function formatted time to its caller
      * @param d Date 
      */
-    function standard(d: Date): TimeState {
+    function standard(d: Date): PI.TimeState {
 
         let hrs = d.getHours();
         let min = d.getMinutes();
         let sec = d.getSeconds();
 
-        var state: TimeState = {
+        var state: PI.TimeState = {
             mid: '',
             hrs: 0,
             min: (min < 10 ? '0' + min : min),

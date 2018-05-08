@@ -18,7 +18,6 @@ import * as login from './login/views'
  * Import jquery module to support ui interaction
  */
 import * as $ from 'jquery';
-import { filter } from 'rxjs/operators/filter';
 
 footer.load();
 
