@@ -30,6 +30,7 @@ testem.log
 
 # All js files in app
 /app/**/*.js
+/custom_plugins/**/*.js
 
 # e2e
 /e2e/*.js
