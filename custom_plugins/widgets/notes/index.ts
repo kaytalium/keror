@@ -1,3 +1,7 @@
 export module notes{
-    let note = {name:"John"};
+    let notes = {
+        name:"John Doe",
+        mesg: "Welcome to Bamboo town"
+    };
+     
 }
