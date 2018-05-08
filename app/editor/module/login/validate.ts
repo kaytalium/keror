@@ -1,5 +1,5 @@
 const storage = require('electron-json-storage');
-import {AppInterface as AI} from './../interface'
+import {AppInterface as AI} from './../../../common/interface'
 import $ = require('jquery'); 
 class validate {
     

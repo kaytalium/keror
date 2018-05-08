@@ -175,7 +175,7 @@ export module notification {
 const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     {
         id: "0001",
-        imageUrl: "../../../assets/img/system/settings.png",
+        imageUrl: "./../../../../assets/img/system/settings.png",
         title: "New Updates Available",
         info: "Version 1.0.1 comes with security updates and more",
         read: false,
@@ -184,7 +184,7 @@ const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     },
     {
         id: "0002",
-        imageUrl: "../../../assets/img/system/alarm.jpg",
+        imageUrl: "./../../../../assets/img/system/alarm.jpg",
         title: "Reminder - John Brown",
         info: "Call back John Brown to find out if payment was made to the account as promise",
         read: false,
@@ -193,7 +193,7 @@ const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     },
     {
         id: "0003",
-        imageUrl: "../../../assets/img/system/alarm.jpg",
+        imageUrl: "./../../../../assets/img/system/alarm.jpg",
         title: "Reminder - general staff meeting",
         info: "to write speech for CEO before 3:00pm today ",
         read: false,
@@ -202,7 +202,7 @@ const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     },
     {
         id: "0004",
-        imageUrl: "../../../assets/img/system/logo.png",
+        imageUrl: "./../../../../assets/img/system/logo.png",
         title: "General staff meeting",
         info: "Meeating schedule for January 25, 2019 ",
         read: false,
@@ -211,7 +211,7 @@ const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     },
     {
         id: "0005",
-        imageUrl: "../../../assets/img/system/alarm.jpg",
+        imageUrl: "./../../../../assets/img/system/alarm.jpg",
         title: "reminder - Mary Sue",
         info: "Will be stopping by today to check out office computer ",
         read: false,
@@ -220,7 +220,7 @@ const MESSAGES: Array<PluginInterface.NotificationMessage> = [
     },
     {
         id: "0006",
-        imageUrl: "../../../assets/img/system/logo.png",
+        imageUrl: "./../../../../assets/img/system/logo.png",
         title: "Gate Security Meeting",
         info: "Meeting of the gate security schedule for tonight @ 8:00 PM",
         read: false,

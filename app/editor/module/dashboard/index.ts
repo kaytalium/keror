@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
-import { AppInterface } from './../interface'
+import { AppInterface } from './../../../common/interface'
 import { footer } from './../footer'
 import { searchnginx, notification, profile } from 'kplugins'
-import { cms } from './../views/cms'
+import { cms } from './../cms'
 
 
 
@@ -22,7 +22,7 @@ const fs = require('fs');
 let appTheme: AppInterface.AppTheme;
 
 try {
-    appTheme = yaml.load(fs.readFileSync('./app/config/appTheme.yml', 'utf8'))
+    appTheme = yaml.load(fs.readFileSync('./app/editor/configuration/appTheme.yml', 'utf8'))
     // console.log(appTheme)
 } catch (e) {
     console.log(e);

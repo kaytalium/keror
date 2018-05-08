@@ -46,7 +46,7 @@ function createWindow() {
   mainWindow = new BrowserWindow(windowParams)
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/app/lib/dashboard/view/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/editor/module/dashboard/view/index.html`)
 
   // const page = mainWindow.webContents;
 

@@ -4,21 +4,21 @@
 default:
   backgroundTheme:
     background-color: '#34150'
-    background-image: "url('./../../../assets/img/bg1.jpg')"
+    background-image: "url('./../../../../assets/img/bg1.jpg')"
     background-size: "cover"
   info:
     image: "bg1.jpg"
     url: "assets/img/"
-    imageUrl: "./../../../app/assets/img/bg1.jpg"
-    file: "./../../../assets/css/default.css"
+    imageUrl: "./../../../../assets/img/bg1.jpg"
+    file: "./../../../../assets/css/default.css"
 
 dark:
   backgroundTheme:
     background-color: '#000'
-    background-image: "url('./assets/img/bg7.jpg')"
+    background-image: "url('./../../../../assets/img/bg7.jpg')"
     background-size: "cover"
   info:
     image: "bg1.jpg"
     url: "assets/img/"
-    imageUrl: "./app/assets/img/bg7.jpg"
+    imageUrl: "./../../../..//assets/img/bg7.jpg"
     file: "assets/css/dark.css"

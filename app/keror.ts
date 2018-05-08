@@ -6,12 +6,12 @@ const storage = require('electron-json-storage');
 /**
  * import the footer constrol module
  */
-import { footer } from './footer/'
+import { footer } from './editor/module/footer'
 
 /**
  *get the login module views 
  */
-import * as login from './login/views'
+import { views } from './editor/module/login'
 
 
 /**
@@ -52,9 +52,9 @@ $(document).ready(function () {
  */
 storage.get('logged_users', function (err, data) {
     
-    //if here is an err then run the login module
+    //if there is an err then run the login module
     if (err)
-        $('.content').append(login.main_login())
+        $('.content').append(views.main_login())
 
     //if data, then get the users list and setup vars
     let users = data.users;
@@ -66,7 +66,7 @@ storage.get('logged_users', function (err, data) {
             isLoggin = false;
         }
     });
-    $('.content').append(login.active_user())
+    $('.content').append(views.active_user())
     //load the modules base on response from loop
     // if (isLoggin) {
     //     $('.content').load("./views/authenticate/login.html")

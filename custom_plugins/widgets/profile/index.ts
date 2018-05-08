@@ -23,7 +23,7 @@ export module profile {
     let appTheme: PluginInterface.AppTheme;
 
     try {
-        let data = fs.readFileSync('./app/config/appTheme.yml', 'utf8');
+        let data = fs.readFileSync('./app/editor/configuration/appTheme.yml', 'utf8');
         appTheme = yaml.load(data)
         // console.log(appTheme)
     } catch (e) {

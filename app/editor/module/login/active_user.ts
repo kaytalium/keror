@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import { AppInterface as AI } from './../interface'
+import { AppInterface as AI } from './../../../common/interface'
 import { timer } from "kplugins"
 
 var users: Array<AI.ActiveUser> = [
@@ -137,7 +137,7 @@ var view = $('.view')
 $(document).ready(function () {
 
     new_user.click(function(){
-        $('.content').load("./views/authenticate/login.html")
+        $('.content').load("./views/login.html")
     })
 
     if (users.length == 1) {

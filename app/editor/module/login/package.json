@@ -1,5 +1,5 @@
 {
     "name": "login",
     "version": "1.0.0",
-    "main": "login"
+    "main": "index"
 }
