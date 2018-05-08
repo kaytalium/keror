@@ -23,7 +23,7 @@ var notification;
                         '</div>';
                 }
             };
-            let styleURL = `file://${__dirname}/notifier.css`;
+            let styleURL = `file://${__dirname}/css/styles.css`;
             //Add search style to the document
             $('head').append('<link rel="stylesheet" href="' + styleURL + '" type="text/css" />');
             let anchor = $('notification');

@@ -13,7 +13,7 @@
 .p-avatar{
     width: 30px;
     height: 30px;
-    background: url('./../../../assets/img/default.png') peru;
+    background: url('./../img/default.png') peru;
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
@@ -61,7 +61,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: url('./../../../assets/img/default.png')  rgb(238, 235, 235);
+    background: url('./../img/default.png')  rgb(238, 235, 235);
     background-size: cover;
     margin: 10px 15px; 
     float: left;

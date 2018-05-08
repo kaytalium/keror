@@ -41,7 +41,7 @@ export module profile {
 
         $(document).ready(function () {
 
-            let styleURL = `file://${__dirname}/profile.css`
+            let styleURL = `file://${__dirname}/css/profile.css`
             //Add profile style to the document
             $('head').append('<link rel="stylesheet" href="' + styleURL + '" type="text/css" />');
 
