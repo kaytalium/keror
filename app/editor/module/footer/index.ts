@@ -6,7 +6,7 @@ import { AppInterface } from './../../../common/interface'
 /**
  * import network status to display play the state of the internet to the app
  */
-import { status } from './network';
+import { status } from './model/network';
 
 /**
  * Import jquery module to support ui interaction
@@ -37,7 +37,7 @@ export module footer {
     let styles
 
     try{
-        styles = yaml.safeLoad(fs.readFileSync(`${__dirname}/style.yml`,'utf8'))
+        styles = yaml.safeLoad(fs.readFileSync(`${__dirname}/css/style.yml`,'utf8'))
     }catch (e){
         console.log(e)
     }

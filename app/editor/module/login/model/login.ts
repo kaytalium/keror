@@ -1,7 +1,7 @@
 /**
  * import interface
  */
-import {AppInterface as AI} from './../../../common/interface'
+import {AppInterface as AI} from './../../../../common/interface'
 
 /**
  * import js-yaml to handle my .yml config files  
@@ -23,7 +23,7 @@ import $ = require('jquery');
 let loginUI: AI.LoginUI;
 
 try {
-    loginUI = yaml.safeLoad(fs.readFileSync('./login.yml', 'utf8'));
+    loginUI = yaml.safeLoad(fs.readFileSync('./css/login.yml', 'utf8'));
    // console.log(loginUI)
 } catch (e) {
     console.log(e);

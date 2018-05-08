@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import { AppInterface as AI } from './../../../common/interface'
+import { AppInterface as AI } from './../../../../common/interface'
 import { timer } from "kplugins"
 
 var users: Array<AI.ActiveUser> = [
