@@ -5,7 +5,7 @@ if (setupEvents.handleSquirrelEvent()) {
   // squirrel event handled and app will exit in 1000ms, so don't do anything else
   return;
 }
-
+const admin = require('firebase');
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
@@ -46,7 +46,32 @@ function createWindow() {
   mainWindow = new BrowserWindow(windowParams)
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/app/editor/module/system/view/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/editor/module/system/view/layout.html`)
+
+  try{
+    var config = {
+        apiKey: "AIzaSyAvIUIEn0SlNRBk1AEQDgHwEZPeoiZDzng",
+        databaseURL: "https://kerror-d7f48.firebaseio.com",
+        projectId: "kerror-d7f48",
+        storageBucket: "",
+        messagingSenderId: "851750732380"
+    };
+   
+
+
+
+  admin.initializeApp(config)
+    let docRef = admin.firestore().collection('customer').doc('lot3')
+
+    let setData = docRef.set({
+        firstname:'Bob',
+        lastname:'Curry',
+        age:64,
+        superStar:'yes'
+    })
+}catch(error){
+    console.log(error)
+}
 
   // const page = mainWindow.webContents;
 

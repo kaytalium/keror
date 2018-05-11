@@ -1,0 +1,351 @@
+.notification-icon{
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(163, 159, 159);
+    cursor: pointer;
+}
+
+
+.notification-counter{
+    background: rgba(238, 26, 26, 0.87);
+    position: absolute;
+    left: 11px;
+    top: -12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: right;
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 1px 1px 1px #B0B0B0;
+}
+
+notification{
+    /* background: blueviolet; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    color: #000000;
+    
+    
+}
+
+/******************************************************* 
+ *               Notification Dropdown
+********************************************************/
+.notification-detail{
+    width: 310px;
+    height: 330px;
+    background: #EEEEEE;
+    position: fixed;
+    top: 0;
+    right: 74px;
+    margin-top: 75px;
+    z-index: 99999 !important;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    /* overflow: hidden; */
+    display: none;
+    /* overflow-y:scroll; */
+
+    /* box-shadow: 5px 5px 2px rgb(46, 45, 45); */
+}
+
+.notification-au{
+    float: right;
+    margin-top: -10px;
+    margin-right: 20px;
+    border-bottom: 10px solid #EEEEEE;
+}
+
+.notification-header{
+    height: 30px;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+.notification-list{
+    padding: 0;
+    margin: 0;
+    width: 310px;
+    height: 233px;
+    /* background: peru; */
+    overflow-y: scroll;
+    
+}
+
+.notification-list > li.pnl{
+    width: 280px;
+    height: 45px;
+    background: #EEEEEE;
+    display: list-item;
+    padding: 5px ;
+    margin: 2px 0;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(104, 102, 102);
+    /* background: green; */
+    border-bottom: 1px solid #bebebe;
+}
+
+.notification-list > li.pnl:hover{
+    background: rgb(224, 224, 224);
+}
+
+.notification-list > li.pnl:first-child{
+    margin-top: 0px;
+}
+
+
+.notification-list-ih{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #979393;
+    background: url('./../img/default.png')  rgb(238, 235, 235);
+    background-size: cover;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: red;
+    margin-top: 10px; 
+}
+
+.notification-list-info{
+    float: left;
+    width: calc(100% - 37px);
+    margin-left: 5px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.notification-list-info-status{
+    width: auto;
+    /* background: red; */
+    padding: 5px;
+    color: rgb(245, 10, 10);
+    float: right;
+    clear: both;
+    font-size: 12px;
+    text-transform: lowercase;
+    border-radius: 5px;
+    
+}
+
+.notification-list-info-status::before{
+    content: '*';
+}
+.notification-list-info-title{
+    /* background: red; */
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.notification-list-info-detail{
+    width: 100%;
+    height: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-footer{
+    /* background: #f00; */
+    height: 35px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notification-footer:hover{
+    color: peru;
+}
+
+
+
+/* arrows */
+
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /* border-bottom: 10px solid transparent; */
+  }
+  
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #f00;
+  }
+  
+  .arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-left: 60px solid green;
+  }
+  
+  .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid blue; 
+  }
+
+
+
+/******************************************************* 
+ *               Notification Dropdown
+********************************************************/
+
+.notification-view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+
+}
+
+.nv-cover{
+    height: 100vh;
+    width: 100vw;
+    background: #eaeaea;
+    background-size: cover;
+    filter: blur(1px);
+    position: absolute;
+    opacity: .7;
+    display: none;
+}
+
+.nv-model{
+    z-index: 9999;
+    margin: auto auto;
+    background: #fff;
+    border: 1px solid rgba(223, 223, 223, 0.7);
+    box-shadow: 2px 2px 2px #979393;
+    min-width: 500px;
+    width: 360px;
+    height: 290px;
+    color: #000000;
+    
+    /* overflow: hidden; */
+    
+
+}
+
+.nv-header{
+    width: 100%;
+    height: 50px;
+    background: peru;
+    
+}
+
+.nv-close{
+    float: right;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+    opacity: .7;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 30px;
+    
+}
+
+.nv-close:hover{
+    opacity: 1;
+}
+
+.nv-title{
+    width: auto;
+    float: left;
+    padding: 12px;
+    /* height: 100%; */
+    vertical-align: center;
+    text-transform: capitalize;
+
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    font-family: 'Lato', serif;
+    font-weight: 700;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+/* nv-content */
+.nv-content{
+    /* background:#fff; */
+    width: 100%;
+    height: 150px;
+    opacity: 1;
+    /* overflow: hidden; */
+
+}
+
+.nv-info{
+    width: 93%;
+    height: 400px;
+    padding: 15px;
+ 
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    font-family: 'Lato', serif;
+    font-size: 20px;
+    /* overflow-y: scroll; */
+}
+
+.nv-btn{
+    background: peru;;
+    /* margin-top: -10px; */
+    /* position: absolute; */
+    width: 100px;
+    min-width: 90px;
+    padding: 12px;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #292828;
+}
+
+.nv-btn:hover{
+    background: rgb(224, 151, 77);
+    color: #000000;
+}

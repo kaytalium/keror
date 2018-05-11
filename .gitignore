@@ -31,6 +31,7 @@ testem.log
 # All js files in app
 /app/**/*.js
 /custom_plugins/**/*.js
+/functions
 
 # e2e
 /e2e/*.js
@@ -39,3 +40,10 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#firebase cloud function files
+.firebaserc
+firebase.json
+firestore.indexes.json
+firestore.rules
+storage.rules

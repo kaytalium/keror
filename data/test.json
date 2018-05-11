@@ -1,0 +1,22 @@
+{
+    "1": {   "status": "Normal",
+        "accountNumber": "1200",
+        "accountHolder": "Marie Wright",
+        "balance": 12000,
+        "lastPayment": {
+            "date": 1784575889874,
+            "amount": 24000
+        }
+    },
+    "2":{
+        "status": "Normal",
+        "accountNumber": "0345",
+        "accountHolder": "Roy Moore",
+        "balance": 2000,
+        "lastPayment": {
+            "date": 1788985254578,
+            "amount": 3000
+        }
+    }
+    
+}

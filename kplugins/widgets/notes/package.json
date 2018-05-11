@@ -1,0 +1,11 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "A Widget to create notes  ",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ovel Heslop <kayheslop@gmail.com> (http://www.knymbus.com)",
+  "license": "ISC"
+}

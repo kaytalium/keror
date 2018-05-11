@@ -16,6 +16,9 @@ const yaml = require('js-yaml');
  */
 const fs = require('fs');
 
+import {init} from './../../../common/init'
+
+init.start()
 /**
  * create var for holding the data coming from the footer.yml file
  */
@@ -48,14 +51,28 @@ notification.load()
  */
 profile.load()
 
+let  winTitle: JQuery<HTMLElement>;
+
+let titleData = {
+    dashboard: "Keror: Dashboard - Ovel Heslop",
+    list: "Keror: Customer List - Ovel Heslop",
+    report: "Keror: Report - Ovel Heslop"
+
+}
 
 /**
  * Jquery Document.ready function
  */
 $(document).ready(function () {
+
+   
     $('body').css(Object.assign(appTheme.default.backgroundTheme))
     $('head').append('<link rel="stylesheet" href="' + appTheme.default.info.file + '" type="text/css" />');
 
+
+    //grab the title of the system and set it up
+    winTitle = $('title');
+    winTitle.html(titleData.dashboard)
     //setup the class for the hearder menu settings  
     $('.settings').addClass('header-settings')
 
@@ -79,18 +96,22 @@ $(document).ready(function () {
             main_router.html('')
             main_router.append(cms.load())
             cms.loadTableData()
+            winTitle.html(titleData.list)
+
         }
 
         if (data == 'dashboard') {
             main_router.html('')
             titleHolder.addClass('load')
             title.html(data).appendTo(main_router)
+            winTitle.html(titleData.dashboard)
         }
 
         if (data == 'report') {
             main_router.html('')
             title.html(data)
             titleHolder.addClass('load')
+            winTitle.html(titleData.report)
         }
 
     })

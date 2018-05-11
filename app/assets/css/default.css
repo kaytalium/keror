@@ -1,13 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
 /* Stylesheet */
 body, html{
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Raleway', sans-serif;
     /* background: url('./../img/bg1.jpg') rgb(62, 67, 80); */
     
     color: #fff;
-    opacity: 0.95;
+    opacity: 1;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
@@ -23,10 +25,11 @@ wrapper{
  ***************************************/
 
 sidebar{
-    background: #000000;
+    background: #353E43;
     height: 100vh;
-    width: 204px;
+    width: 300px;
     float: left;
+    color:#8F9497;
 }
 
 /* Logo styles */
@@ -66,10 +69,11 @@ font-size: 8px;
 }
 
 .sidebar-profile{
-    height: 100px;
+    height: 120px;
     clear: both;
     overflow: hidden;
-    border-bottom: 1px solid #272727;
+    background: #4A5557;
+    border-bottom: 1px solid #474545;
     
     
 }
@@ -96,7 +100,7 @@ font-size: 8px;
 .sp-info > .span{
     margin-left: 10px;
     padding-top: 5px; 
-    font-size: 16px;
+    font-size: 18px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -121,24 +125,29 @@ ul.sidebar-menu{
 ul.sidebar-menu > li{
     height: 50px;
     /* background: #f00; */
-    color: #fff;
+    color: rgb(163, 165, 167);
     width: 100%;
     padding: 5px 0;
     cursor: pointer;
-
+    font-size: 14px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-bottom: 1px solid #272727;
+    /* border-bottom: 1px solid #272727; */
 }
 
 ul.sidebar-menu > li:hover{
     background: rgba(255, 166, 0, 0.712);/*rgb(95, 95, 95);*/
     text-decoration: underline;
+    color: rgb(205, 209, 211);
+}
+
+ul.sidebar-menu > li:hover > span > i{
+    color: rgb(205, 209, 211);
 }
 
 ul.sidebar-menu > li > span{
-    margin-left: 35px; 
+    margin-left: 75px; 
 }
 
 ul.sidebar-menu > li > span > i{
@@ -153,7 +162,7 @@ ul.sidebar-menu > li > span > i{
 
 content{
     float: left;
-     width: calc(100% - 204px);
+     width: calc(100% - 300px);
      height: 100%;
 }
 
@@ -162,7 +171,7 @@ header{
     height: 8vh;
     border-bottom: 1px solid #000000;
     box-shadow: 3px 3px 3px #080808;
-    background-color: #f4f7f8;
+    background-color: #D4D9DA;
     opacity: 1;
 
 }
@@ -325,7 +334,7 @@ header{
  @media screen and (max-width: 1263px) {
     content {
         /* width: 875px; */
-        width: calc(100% - 204px);
+        width: calc(100% - 300px);
     }
 
     .kheader_search{
