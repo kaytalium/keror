@@ -1,6 +1,6 @@
 {
   "name": "keror",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple desktop application that allow users to see into the future.",
   "main": "index.js",
   "build": {
@@ -25,27 +25,27 @@
   },
   "homepage": "https://github.com/kaytalium/keror#readme",
   "dependencies": {
-    "@firebase/app": "^0.3.1",
+    "@firebase/app": "^0.4.9",
     "@firebase/firestore-types": "^0.4.1",
     "@types/jqueryui": "^1.12.0",
     "concurrently": "3.5.1",
     "electron-is-dev": "^0.3.0",
     "electron-json-storage": "^4.1.0",
     "electron-reload": "1.2.2",
-    "firebase": "^5.0.2",
-    "firebase-admin": "^5.12.0",
+    "firebase": "^6.2.4",
+    "firebase-admin": "^8.2.0",
     "fs-jetpack": "^1.2.0",
     "htmlparser": "^1.7.7",
     "jquery": "^3.2.1",
     "js-yaml": "^3.10.0",
-    "rxjs": "6.1.0"
+    "rxjs": "^6.5.2"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.17",
-    "asar": "^0.14.0",
-    "electron": "2.0.0",
+    "@types/jquery": "^3.3.30",
+    "asar": "^2.0.1",
+    "electron": "^5.0.6",
     "electron-installer-dmg": "^1.0.0",
-    "electron-packager": "12.0.2",
+    "electron-packager": "^14.0.0",
     "electron-prebuilt": "^1.4.13"
   }
 }

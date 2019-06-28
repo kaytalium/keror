@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import { AppInterface } from './../../../common/interface'
 import { footer } from './../footer'
-import { searchnginx, notification, profile } from 'kplugins'
+import { searchnginx, notification, profile } from '../../../../kplugins'
 import { cms } from './../cms'
 
 

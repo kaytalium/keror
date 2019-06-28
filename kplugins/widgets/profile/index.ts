@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 import { PluginInterface } from './../../interface'
-import { notification } from 'kplugins'
+import { notification } from '../../../kplugins'
 import { EventEmitter } from 'events';
 import { setTimeout, setInterval } from 'timers';
 
