@@ -33,7 +33,7 @@
     "electron-json-storage": "^4.1.0",
     "electron-reload": "1.2.2",
     "firebase": "^6.2.4",
-    "firebase-admin": "^8.2.0",
+    "firebase-admin": "^11.4.1",
     "fs-jetpack": "^1.2.0",
     "htmlparser": "^1.7.7",
     "jquery": "^3.2.1",
